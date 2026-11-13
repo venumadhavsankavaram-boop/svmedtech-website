@@ -8,7 +8,12 @@
 <meta property="og:description" content="One system for the whole school. Admissions, fees, accounts, attendance, exams, payroll and a parent app.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://svmedtech.com/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F2A6B'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23F6C98B' text-anchor='middle'%3ESVM%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="https://svmedtech.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>SVM EdTech</title>
 <meta name="description" content="SVM EdTech builds a complete school ERP and website: admissions, fees, accounting, attendance, exams, payroll and a parent app, with Telugu and English help.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap">
@@ -48,7 +53,13 @@ a{color:inherit}
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
-.logo{display:flex;align-items:baseline;gap:8px;text-decoration:none}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:38px;height:38px;flex:none}
+.logo svg .sq{fill:#1F2A6B}
+.logo svg .gd{fill:var(--accent)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo svg .sq{fill:#E8EAF6}}
+:root[data-theme="dark"] .logo svg .sq{fill:#E8EAF6}
+.logo .nm{display:flex;align-items:baseline;gap:8px}
 .logo b{font:700 26px var(--display);letter-spacing:-.5px;color:var(--navy)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo b{color:#fff}}
 :root[data-theme="dark"] .logo b{color:#fff}
@@ -183,7 +194,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="SVM EdTech home"><b>SVM</b><span>EDTECH</span></a>
+    <a class="logo" href="#top" aria-label="SVM EdTech home"><svg viewBox="0 0 64 64" aria-hidden="true"><rect class="sq" x="4" y="4" width="16" height="16" rx="3"/><rect class="sq" x="24" y="4" width="16" height="16" rx="3"/><rect class="gd" x="44" y="4" width="16" height="16" rx="3"/><rect class="sq" x="4" y="24" width="16" height="16" rx="3"/><rect class="sq" x="24" y="24" width="16" height="16" rx="3"/><rect class="sq" x="44" y="24" width="16" height="16" rx="3"/><rect class="sq" x="4" y="44" width="16" height="16" rx="3"/><rect class="sq" x="24" y="44" width="16" height="16" rx="3"/><rect class="sq" x="44" y="44" width="16" height="16" rx="3"/></svg><span class="nm"><b>SVM</b><span>EDTECH</span></span></a>
     <nav class="nav" aria-label="Main">
       <a href="#modules">What you get</a>
       <a href="#packages">Packages</a>
