@@ -211,8 +211,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <h2>See it working with your own questions.</h2>
       <p>We show the ERP on a live demo and answer what your school needs. One login, three kinds of user. Each sees only their own part of the school.</p>
       <ul class="roles"><li>Admin</li><li>Staff</li><li>Parents</li></ul>
-      <div class="url">9701424177</div>
-      <a class="btn btn-primary" href="https://wa.me/919701424177" target="_blank" rel="noopener">Message on WhatsApp</a>
+      <div class="url">venu@svmedtech.com</div>
+      <a class="btn btn-primary" href="#contact">Request a demo</a>
     </aside>
   </div>
 </section>
@@ -353,12 +353,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
     <div>
       <div class="eyebrow">Book a demo</div>
       <h2>Let's set up a live demo for your school.</h2>
-      <p class="lede">Call or message with your school's name and a convenient time.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/919701424177" target="_blank" rel="noopener">Message on WhatsApp</a>
-      </div>
+      <p class="lede">Send us your school's name and a convenient time, and we will get back to you.</p>
       <form class="lead-form" id="leadForm" novalidate hidden>
-        <h3>Or ask us to call you</h3>
+        <h3>Ask us for a demo</h3>
         <div class="row">
           <label>Your name<input name="contactName" autocomplete="name" required></label>
           <label>School name<input name="schoolName" autocomplete="organization"></label>
@@ -374,7 +371,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       </form>
     </div>
     <dl class="details">
-      <div><dt>Call or WhatsApp</dt><dd id="v-phone">9701424177</dd><button class="copy" type="button" data-copy="9701424177">Copy</button></div>
       <div><dt>Email</dt><dd id="v-mail">venu@svmedtech.com</dd><button class="copy" type="button" data-copy="venu@svmedtech.com">Copy</button></div>
       <div><dt>Based in</dt><dd>B Kotha Kota, Andhra Pradesh</dd><span></span></div>
     </dl>
@@ -404,9 +400,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       if(!d.phone&&!d.email){note.textContent='Please enter a phone number or an email so we can reach you.';note.className='lead-note err';return}
       btn.disabled=true;note.textContent='Sending...';
       fetch(LEADS_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){
-        if(r.ok){f.reset();note.textContent='Thank you. We will call you soon. You can also message 9701424177 on WhatsApp.';note.className='lead-note ok'}
+        if(r.ok){f.reset();note.textContent='Thank you. We will get back to you soon.';note.className='lead-note ok'}
         else return r.json().then(function(j){throw new Error(j&&j.error||'Could not send')},function(){throw new Error('Could not send')});
-      }).catch(function(e){note.textContent=(e&&e.message&&e.message!=='Failed to fetch'?e.message:'Could not send just now.')+' Please message us on WhatsApp: 9701424177.';note.className='lead-note err'}).then(function(){btn.disabled=false});
+      }).catch(function(e){note.textContent=(e&&e.message&&e.message!=='Failed to fetch'?e.message:'Could not send just now.')+' Please email us at venu@svmedtech.com.';note.className='lead-note err'}).then(function(){btn.disabled=false});
     });
   }
 })();
