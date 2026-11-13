@@ -163,6 +163,17 @@ details p{margin-top:10px;color:var(--muted)}
 .copy:hover{border-color:#fff;color:#fff}
 @media (max-width:860px){.contact{grid-template-columns:minmax(0,1fr);gap:30px}}
 @media (max-width:420px){.details div{grid-template-columns:minmax(0,1fr) auto}.details dt{grid-column:1/-1}}
+.lead-form{margin-top:30px;display:grid;gap:12px;max-width:34em}
+.lead-form h3{margin:0;font:700 20px var(--display);color:#fff}
+.lead-form .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.lead-form label{display:flex;flex-direction:column;gap:5px;font:600 11px var(--body);letter-spacing:1.6px;text-transform:uppercase;color:var(--gold)}
+.lead-form input,.lead-form textarea{background:#fff;color:#14182B;border:2px solid transparent;border-radius:4px;padding:11px 12px;font:400 15px var(--body);width:100%;box-sizing:border-box}
+.lead-form input:focus-visible,.lead-form textarea:focus-visible{outline:3px solid var(--cta);outline-offset:2px}
+.lead-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.lead-form button[disabled]{opacity:.6;cursor:wait}
+.lead-note{font-size:14px;line-height:1.5;color:#D7D9E6;min-height:1.5em}
+.lead-note.ok{color:#9BE3B5}.lead-note.err{color:#FFB4B4}
+@media (max-width:520px){.lead-form .row{grid-template-columns:minmax(0,1fr)}}
 
 footer{background:var(--deep);color:#B9BCD3;font-size:13px;border-top:1px solid #3A4069}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-top:22px;padding-bottom:26px}
@@ -346,6 +357,21 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <div class="actions">
         <a class="btn btn-primary" href="https://wa.me/919701424177" target="_blank" rel="noopener">Message on WhatsApp</a>
       </div>
+      <form class="lead-form" id="leadForm" novalidate hidden>
+        <h3>Or ask us to call you</h3>
+        <div class="row">
+          <label>Your name<input name="contactName" autocomplete="name" required></label>
+          <label>School name<input name="schoolName" autocomplete="organization"></label>
+        </div>
+        <div class="row">
+          <label>Phone or WhatsApp<input name="phone" type="tel" inputmode="tel" autocomplete="tel"></label>
+          <label>Email<input name="email" type="email" autocomplete="email"></label>
+        </div>
+        <label>What would you like to see?<textarea name="message" rows="3" maxlength="1000"></textarea></label>
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div><button class="btn btn-primary" type="submit" id="leadBtn">Request a demo</button></div>
+        <div class="lead-note" id="leadNote" role="status" aria-live="polite"></div>
+      </form>
     </div>
     <dl class="details">
       <div><dt>Call or WhatsApp</dt><dd id="v-phone">9701424177</dd><button class="copy" type="button" data-copy="9701424177">Copy</button></div>
@@ -364,6 +390,26 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 </footer>
 
 <script>
+(function(){
+  /* Request-a-demo form: posts to the SVM EdTech Admin dashboard (Leads tab). Until the address below is filled in, the form stays hidden and WhatsApp remains the way to enquire. */
+  var LEADS_URL='https://admin.svmedtech.com/api/public/leads';
+  var f=document.getElementById('leadForm');
+  if(f&&LEADS_URL){
+    f.hidden=false;
+    var note=document.getElementById('leadNote'),btn=document.getElementById('leadBtn');
+    f.addEventListener('submit',function(ev){
+      ev.preventDefault();note.className='lead-note';
+      var d={};['contactName','schoolName','phone','email','message','website'].forEach(function(k){d[k]=(f.elements[k].value||'').trim()});
+      if(!d.contactName){note.textContent='Please enter your name.';note.className='lead-note err';f.elements.contactName.focus();return}
+      if(!d.phone&&!d.email){note.textContent='Please enter a phone number or an email so we can reach you.';note.className='lead-note err';return}
+      btn.disabled=true;note.textContent='Sending...';
+      fetch(LEADS_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){
+        if(r.ok){f.reset();note.textContent='Thank you. We will call you soon. You can also message 9701424177 on WhatsApp.';note.className='lead-note ok'}
+        else return r.json().then(function(j){throw new Error(j&&j.error||'Could not send')},function(){throw new Error('Could not send')});
+      }).catch(function(e){note.textContent=(e&&e.message&&e.message!=='Failed to fetch'?e.message:'Could not send just now.')+' Please message us on WhatsApp: 9701424177.';note.className='lead-note err'}).then(function(){btn.disabled=false});
+    });
+  }
+})();
 (function(){
   try{document.getElementById('yr').textContent=new Date().getFullYear()}catch(e){}
   document.querySelectorAll('.copy').forEach(function(b){
