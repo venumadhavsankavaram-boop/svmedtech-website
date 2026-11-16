@@ -278,6 +278,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 :root[data-theme="dark"] .sec-card{border-top-color:var(--gold)}
 .sec-card h3{font:700 19px var(--display);margin-bottom:6px}
 .sec-card p{color:var(--muted);font-size:15px}
+.rel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:40px}
+.rel-card{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:clamp(20px,3vw,30px)}
+.rel-card h3{font:700 21px var(--display);margin:0 0 12px;color:var(--ink)}
+.rel-card ul{margin:0;padding:0;list-style:none}
+.rel-card li{position:relative;padding:0 0 11px 22px;color:var(--muted);font-size:16px;line-height:1.5}
+.rel-card li::before{content:"";position:absolute;left:2px;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--navy)}
+.rel-card li b{color:var(--ink);font-weight:600}
+.rel-note{margin:22px 0 0;text-align:center;color:var(--muted);font-size:16px}
+@media (max-width:860px){.rel{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:860px){.secure{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.secure{grid-template-columns:minmax(0,1fr)}}
 .fit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}

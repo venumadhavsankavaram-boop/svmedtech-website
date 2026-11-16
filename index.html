@@ -308,6 +308,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 :root[data-theme="dark"] .sec-card{border-top-color:var(--gold)}
 .sec-card h3{font:700 19px var(--display);margin-bottom:6px}
 .sec-card p{color:var(--muted);font-size:15px}
+.rel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:40px}
+.rel-card{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:clamp(20px,3vw,30px)}
+.rel-card h3{font:700 21px var(--display);margin:0 0 12px;color:var(--ink)}
+.rel-card ul{margin:0;padding:0;list-style:none}
+.rel-card li{position:relative;padding:0 0 11px 22px;color:var(--muted);font-size:16px;line-height:1.5}
+.rel-card li::before{content:"";position:absolute;left:2px;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--navy)}
+.rel-card li b{color:var(--ink);font-weight:600}
+.rel-note{margin:22px 0 0;text-align:center;color:var(--muted);font-size:16px}
+@media (max-width:860px){.rel{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:860px){.secure{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.secure{grid-template-columns:minmax(0,1fr)}}
 .fit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
@@ -500,6 +509,28 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <div class="r" role="row"><div class="k">Fees and hall tickets</div><div class="o">Handled by hand at exam time.</div><div class="w">An optional hold while fees are due, with every exception recorded.</div></div>
       <div class="r" role="row"><div class="k">What you pay for</div><div class="o">A fixed bundle.</div><div class="w">Website and ERP, ERP alone, or only the modules you choose.</div></div>
     </div>
+    <div class="rel">
+      <div class="rel-card">
+        <h3>Reliable, by design</h3>
+        <ul>
+          <li><b>Your own app and database.</b> Another school's problem can never reach yours.</li>
+          <li><b>Backups you control.</b> Automatic backups, and a full copy you can download whenever you like.</li>
+          <li><b>Records that stay put.</b> Attendance and marks lock once entered, and corrections are approved and recorded.</li>
+          <li><b>Tested before release.</b> Every update is checked by automated tests before it reaches your school.</li>
+          <li><b>One person answers.</b> Problems and change requests go straight to the person who builds the software.</li>
+        </ul>
+      </div>
+      <div class="rel-card">
+        <h3>Economical, by design</h3>
+        <ul>
+          <li><b>One system, not four.</b> Fees, accounting, attendance, exams, staff, and the teacher and parent apps work together, so you do not buy separate accounting or app software.</li>
+          <li><b>Pay for what you use.</b> Website and ERP, ERP alone, or only the modules you choose, and add more later.</li>
+          <li><b>No middlemen.</b> Changes you ask for are made by us, not queued behind a ticket desk or a reseller.</li>
+          <li><b>Fewer manual jobs.</b> Fee reminders, receipts, reports and hall-ticket holds happen by themselves, so the office spends less time on repeat work.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="rel-note">We do not claim to be the cheapest. Tell us what your school needs, and we will send a written quote you can set beside any other, line by line.</p>
   </div>
 </section>
 
