@@ -311,6 +311,29 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 .cta-band h2{font-size:clamp(26px,3.6vw,36px);line-height:1.1;max-width:20em}
 .cta-band .btn{background:var(--deep);color:#fff}
 .cta-band .btn:hover{filter:brightness(1.25)}
+
+.finder{color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:clamp(20px,4vw,36px);max-width:52em}
+.finder fieldset{border:0;margin:0 0 22px;padding:0}
+.finder legend{font:700 19px var(--display);color:var(--navy);margin-bottom:10px;padding:0}
+.finder .opts{display:flex;flex-wrap:wrap;gap:10px}
+.finder .opts label{color:var(--ink);display:inline-flex;align-items:center;gap:9px;border:2px solid var(--line);border-radius:999px;padding:10px 18px;cursor:pointer;font:500 15px var(--body);background:var(--bg)}
+.finder .opts label:has(input:checked){border-color:var(--navy);background:var(--navy-soft)}
+.finder legend,.finder .finder-res h3{color:var(--ink)}
+.finder .finder-res{border-top-color:var(--line)}
+.finder .opts label:has(input:checked){color:#14182B}
+.finder .opts input{accent-color:var(--navy);width:17px;height:17px}
+.finder .opts label:focus-within{outline:3px solid var(--cta);outline-offset:2px}
+.finder .mods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.finder .mods label{border-radius:6px}
+.finder-res{margin-top:6px;border-top:2px solid var(--navy);padding-top:20px}
+.finder-res h3{font:700 24px var(--display);color:var(--navy);margin-bottom:6px}
+.finder-res p{color:var(--muted);margin-bottom:14px}
+@media (max-width:760px){.finder .mods{grid-template-columns:minmax(0,1fr)}}
+.brochure{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,56px);align-items:center}
+.brochure h2{font-size:clamp(28px,4vw,38px);line-height:1.1;color:#fff}
+.brochure p{color:var(--navy-soft);margin-top:10px}
+.brochure .lead-form{margin-top:0}
+@media (max-width:860px){.brochure{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -540,6 +563,37 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
   </div>
 </section>
 
+<section class="band-navy" id="finder" style="padding-top:clamp(56px,8vw,96px);padding-bottom:clamp(56px,8vw,96px)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Not sure where to start?</div>
+      <h2>Which package fits your school?</h2>
+      <p>Answer two quick questions. We will suggest a starting point, and you can still change it after the demo.</p>
+    </div>
+    <form class="finder" id="finderForm" novalidate>
+      <fieldset><legend>Does your school already have a website you are happy with?</legend>
+        <div class="opts"><label><input type="radio" name="web" value="yes"> Yes, we have one</label><label><input type="radio" name="web" value="no"> No, or we want a new one</label></div></fieldset>
+      <fieldset><legend>What do you need?</legend>
+        <div class="opts"><label><input type="radio" name="need" value="all"> The whole school ERP</label><label><input type="radio" name="need" value="some"> Only some parts</label></div></fieldset>
+      <fieldset id="finderMods" hidden><legend>Which parts?</legend>
+        <div class="opts mods">
+          <label><input type="checkbox" name="mod" value="Fees"> Fees</label>
+          <label><input type="checkbox" name="mod" value="Attendance"> Attendance</label>
+          <label><input type="checkbox" name="mod" value="Exams and results"> Exams and results</label>
+          <label><input type="checkbox" name="mod" value="Accounting"> Accounting</label>
+          <label><input type="checkbox" name="mod" value="Staff and payroll"> Staff and payroll</label>
+          <label><input type="checkbox" name="mod" value="Inventory"> Inventory</label>
+          <label><input type="checkbox" name="mod" value="Hostel"> Hostel</label>
+          <label><input type="checkbox" name="mod" value="Transport"> Transport</label>
+          <label><input type="checkbox" name="mod" value="Library"> Library</label>
+          <label><input type="checkbox" name="mod" value="Timetable and homework"> Timetable and homework</label>
+          <label><input type="checkbox" name="mod" value="Communications"> Communications</label>
+        </div></fieldset>
+      <div class="finder-res" id="finderRes" role="status" aria-live="polite" hidden></div>
+    </form>
+  </div>
+</section>
+
 <section class="band-navy" id="about">
   <div class="wrap about">
     <div>
@@ -571,6 +625,29 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <details><summary>How does payment work?</summary><p>There is a one-time setup fee and a yearly fee. Setup and the first year are paid at signing, then the yearly fee each year. You get the full quote after the demo, and GST is extra.</p></details>
       <details><summary>How much does it cost?</summary><p>It depends on your school's size and which package or modules you choose. Message us and we will send a quote after the demo.</p></details>
     </div>
+  </div>
+</section>
+
+<section class="band-navy" id="brochure" style="padding-top:clamp(56px,8vw,96px);padding-bottom:clamp(56px,8vw,96px)">
+  <div class="wrap brochure">
+    <div>
+      <div class="eyebrow" style="color:var(--gold)">Take it with you</div>
+      <h2>Get the SVM EdTech brochure.</h2>
+      <p>Two pages on what the ERP covers, the three packages and how each school gets its own app. Share it with your management or trustees.</p>
+    </div>
+    <form class="lead-form" id="broForm" novalidate>
+      <div class="row">
+        <label>Your name<input name="contactName" autocomplete="name" required></label>
+        <label>School name<input name="schoolName" autocomplete="organization"></label>
+      </div>
+      <div class="row">
+        <label>Phone or WhatsApp<input name="phone" type="tel" inputmode="tel" autocomplete="tel"></label>
+        <label>Email<input name="email" type="email" autocomplete="email"></label>
+      </div>
+      <div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div><button class="btn btn-primary" type="submit" id="broBtn">Get the brochure</button></div>
+      <div class="lead-note" id="broNote" role="status" aria-live="polite"></div>
+    </form>
   </div>
 </section>
 
@@ -642,6 +719,48 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
   }
 })();
 (function(){
+  /* Package finder: two questions -> a suggested package, then pre-fills the demo form. */
+  var f=document.getElementById('finderForm');if(!f)return;
+  var res=document.getElementById('finderRes'),mods=document.getElementById('finderMods');
+  var val=function(n){var e=f.querySelector('input[name="'+n+'"]:checked');return e?e.value:''};
+  function render(){
+    var web=val('web'),need=val('need');
+    mods.hidden=need!=='some';
+    var chosen=[].slice.call(f.querySelectorAll('input[name="mod"]:checked')).map(function(i){return i.value});
+    if(!web||!need||(need==='some'&&!chosen.length)){res.hidden=true;return}
+    var name,why;
+    if(need==='some'){name='Pick your modules';why='ERP only, with just the parts you chose: '+chosen.join(', ')+'. You can add more later.'}
+    else if(web==='yes'){name='ERP only';why='The complete ERP, kept separate from your existing website.'}
+    else{name='Website and ERP';why='A school website and the full ERP, in your school\'s own colours and logo.'}
+    res.hidden=false;res.innerHTML='';
+    var h=document.createElement('h3');h.textContent='We suggest: '+name;
+    var p=document.createElement('p');p.textContent=why+' The price depends on your school\'s size, and we quote it after the demo.';
+    var a=document.createElement('a');a.className='btn btn-primary';a.href='#contact';a.textContent='Ask for a demo with this package';
+    a.addEventListener('click',function(){
+      var m=document.querySelector('#leadForm textarea[name="message"]');
+      if(m)m.value='Package: '+name+(need==='some'?'. Modules: '+chosen.join(', '):'')+'. Website already: '+(web==='yes'?'yes':'no')+'.'});
+    res.appendChild(h);res.appendChild(p);res.appendChild(a);
+  }
+  f.addEventListener('change',render);
+})();
+(function(){
+  /* Brochure form: sends the details to the Leads tab, then shows the download. */
+  var f=document.getElementById('broForm');if(!f)return;
+  var note=document.getElementById('broNote'),btn=document.getElementById('broBtn');
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();note.className='lead-note';
+    var d={};['contactName','schoolName','phone','email','website'].forEach(function(k){d[k]=(f.elements[k].value||'').trim()});
+    if(!d.contactName){note.textContent='Please enter your name.';note.className='lead-note err';f.elements.contactName.focus();return}
+    if(!d.phone&&!d.email){note.textContent='Please enter a phone number or an email.';note.className='lead-note err';return}
+    d.message='Downloaded the brochure';
+    btn.disabled=true;note.textContent='One moment...';
+    var show=function(){note.className='lead-note ok';note.textContent='';var a=document.createElement('a');a.href='/SVM-EdTech-Brochure.pdf';a.target='_blank';a.rel='noopener';a.className='btn btn-primary';a.textContent='Download the brochure (PDF)';note.appendChild(document.createTextNode('Thank you. '));note.appendChild(a);btn.hidden=true;f.reset()};
+    fetch('https://admin.svmedtech.com/api/public/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){
+      if(r.ok)show();else throw new Error('x')
+    }).catch(function(){btn.disabled=false;note.className='lead-note err';note.textContent='Could not send just now. Please email venu@svmedtech.com and we will send it.'});
+  });
+})();
+(function(){
   /* Schools strip: reads /schools.json. Add a school by adding one line there. */
   var t=document.getElementById('schTrack');if(!t||!window.fetch)return;
   /* Source 1: the Admin dashboard (schools ticked "Show on website"). Source 2: /schools.json, used when the dashboard is unreachable or nothing is ticked yet. */
@@ -678,3 +797,4 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 </script>
 </body>
 </html>
+                                                             

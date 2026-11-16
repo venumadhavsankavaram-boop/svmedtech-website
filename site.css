@@ -281,6 +281,29 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 .cta-band h2{font-size:clamp(26px,3.6vw,36px);line-height:1.1;max-width:20em}
 .cta-band .btn{background:var(--deep);color:#fff}
 .cta-band .btn:hover{filter:brightness(1.25)}
+
+.finder{color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:clamp(20px,4vw,36px);max-width:52em}
+.finder fieldset{border:0;margin:0 0 22px;padding:0}
+.finder legend{font:700 19px var(--display);color:var(--navy);margin-bottom:10px;padding:0}
+.finder .opts{display:flex;flex-wrap:wrap;gap:10px}
+.finder .opts label{color:var(--ink);display:inline-flex;align-items:center;gap:9px;border:2px solid var(--line);border-radius:999px;padding:10px 18px;cursor:pointer;font:500 15px var(--body);background:var(--bg)}
+.finder .opts label:has(input:checked){border-color:var(--navy);background:var(--navy-soft)}
+.finder legend,.finder .finder-res h3{color:var(--ink)}
+.finder .finder-res{border-top-color:var(--line)}
+.finder .opts label:has(input:checked){color:#14182B}
+.finder .opts input{accent-color:var(--navy);width:17px;height:17px}
+.finder .opts label:focus-within{outline:3px solid var(--cta);outline-offset:2px}
+.finder .mods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.finder .mods label{border-radius:6px}
+.finder-res{margin-top:6px;border-top:2px solid var(--navy);padding-top:20px}
+.finder-res h3{font:700 24px var(--display);color:var(--navy);margin-bottom:6px}
+.finder-res p{color:var(--muted);margin-bottom:14px}
+@media (max-width:760px){.finder .mods{grid-template-columns:minmax(0,1fr)}}
+.brochure{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,5vw,56px);align-items:center}
+.brochure h2{font-size:clamp(28px,4vw,38px);line-height:1.1;color:#fff}
+.brochure p{color:var(--navy-soft);margin-top:10px}
+.brochure .lead-form{margin-top:0}
+@media (max-width:860px){.brochure{grid-template-columns:minmax(0,1fr)}}
 .kw-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px;margin:0;padding:0;list-style:none}
 .kw-list li{border-top:2px solid var(--navy);padding:14px 0 22px}
 .kw-list h3{font:600 17px var(--body);margin-bottom:6px}
