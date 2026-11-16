@@ -229,6 +229,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 .shot img{display:block;width:100%;height:auto}
 .shot figcaption{margin-top:12px;color:var(--muted);font-size:15px}
 .shot figcaption b{display:block;color:var(--ink);font:600 17px var(--body);margin-bottom:2px}
+.apps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:760px;margin:0 auto}
+.apps-group{margin-top:34px}
+.apps-group h3{font:600 20px var(--body);color:var(--ink);margin:0 0 4px;text-align:center}
+.apps-group p{margin:0 0 18px;color:var(--muted);text-align:center;font-size:15px}
+.apph{margin:0;text-align:center}
+.apph .scr{border:7px solid #1B2142;border-radius:26px;overflow:hidden;background:var(--surface);box-shadow:0 14px 34px rgba(20,24,43,.18);aspect-ratio:11/16}
+.apph img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.apph figcaption{margin-top:10px;color:var(--muted);font-size:14px}
+.apph figcaption b{display:block;color:var(--ink);font:600 15px var(--body)}
+@media (max-width:700px){.apps{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.apph .scr{border-width:4px;border-radius:16px}.apph figcaption{font-size:12px}.apph figcaption b{font-size:13px}}
 @media (max-width:860px){.shots{grid-template-columns:minmax(0,1fr)}}
 
 /* ===== rebuild: richer home page ===== */
@@ -403,6 +413,35 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/result.jpg" width="800" height="491" loading="lazy" alt="SVM EdTech progress report setup with marks, layout and report templates"></div><figcaption><b>Report cards your way</b>Pick the exam, layout and design, then print a class or one student.</figcaption></figure>
     </div>
     <p class="fine"><a href="#contact">Book a demo</a> and we will walk you through it live.</p>
+  </div>
+</section>
+
+<section id="apps" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">In their hands</div>
+      <h2>A simple app for teachers and for parents.</h2>
+      <p>Both work on any phone. Screens from our live demo school, with sample data.</p>
+    </div>
+    <div class="apps-group">
+      <h3>Teachers</h3>
+      <p>Take attendance, enter marks and share homework in a few taps.</p>
+      <div class="apps">
+        <figure class="apph"><div class="scr"><img src="/screens/app-teacher-home.jpg" width="432" height="816" loading="lazy" alt="Teacher app home with attendance, marks, homework and timetable"></div><figcaption><b>Everything in one place</b>Attendance, marks, homework, timetable.</figcaption></figure>
+        <figure class="apph"><div class="scr"><img src="/screens/app-teacher-attendance.jpg" width="432" height="816" loading="lazy" alt="Teacher app attendance screen for a class with present and absent buttons"></div><figcaption><b>Attendance in seconds</b>Mark the class present or absent.</figcaption></figure>
+        <figure class="apph"><div class="scr"><img src="/screens/app-teacher-marks.jpg" width="432" height="816" loading="lazy" alt="Teacher app marks entry screen with exam and class choices"></div><figcaption><b>Enter marks</b>Pick the exam and class, then type.</figcaption></figure>
+      </div>
+    </div>
+    <div class="apps-group">
+      <h3>Parents</h3>
+      <p>Fees, homework, marks and notices, always up to date.</p>
+      <div class="apps">
+        <figure class="apph"><div class="scr"><img src="/screens/app-parent-home.jpg" width="432" height="816" loading="lazy" alt="Parent app home showing the child, class and teacher"></div><figcaption><b>Know what is happening</b>Child, class and class teacher at a glance.</figcaption></figure>
+        <figure class="apph"><div class="scr"><img src="/screens/app-parent-fees.jpg" width="432" height="816" loading="lazy" alt="Parent app fees screen with a Pay by UPI option and pending fees"></div><figcaption><b>Pay fees by UPI</b>Pay with any UPI app. The office confirms and issues the receipt.</figcaption></figure>
+        <figure class="apph"><div class="scr"><img src="/screens/app-parent-child.jpg" width="432" height="816" loading="lazy" alt="Parent app child summary with attendance, homework due and new updates"></div><figcaption><b>Homework and attendance</b>Attendance and homework due, every day.</figcaption></figure>
+      </div>
+    </div>
+    <p class="fine"><a href="#contact">Book a demo</a> and try both apps yourself.</p>
   </div>
 </section>
 
