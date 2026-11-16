@@ -21,7 +21,7 @@
 <meta name="description" content="SVM EdTech builds school ERP software for schools in Andhra Pradesh and across India: admissions, fee collection, accounting, attendance, exams, payroll and a parent app. Book a free demo.">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Organization","@id":"https://svmedtech.com/#org","name":"SVM EdTech","url":"https://svmedtech.com/","logo":"https://svmedtech.com/icon-512.png","email":"venu@svmedtech.com","founder":{"@type":"Person","name":"Venu Madhav Sankavaram"},"address":{"@type":"PostalAddress","addressLocality":"B Kotha Kota","addressRegion":"Andhra Pradesh","addressCountry":"IN"}},
+{"@type":"Organization","@id":"https://svmedtech.com/#org","name":"SVM EdTech","url":"https://svmedtech.com/","logo":"https://svmedtech.com/icon-512.png","email":"venu@svmedtech.com","founder":{"@type":"Person","name":"Venu Madhav Sankavaram"},"address":{"@type":"PostalAddress","addressRegion":"Andhra Pradesh","addressCountry":"IN"},"areaServed":["Andhra Pradesh","India"]},
 {"@type":"WebSite","@id":"https://svmedtech.com/#site","url":"https://svmedtech.com/","name":"SVM EdTech","publisher":{"@id":"https://svmedtech.com/#org"},"inLanguage":"en-IN"},
 {"@type":"SoftwareApplication","name":"SVM EdTech School ERP","applicationCategory":"BusinessApplication","operatingSystem":"Web, Android, iOS","description":"School ERP with admissions, fee collection, accounting, attendance, exams, payroll, timetable, transport, library and a parent app.","publisher":{"@id":"https://svmedtech.com/#org"},"url":"https://svmedtech.com/"}
 ]}
@@ -219,6 +219,98 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 .float-cta.is-hidden{opacity:0;transform:translateY(12px);pointer-events:none}
 @media (max-width:520px){.float-cta{left:16px;right:16px}}
 @media (prefers-reduced-motion:reduce){.float-cta{transition:none}}
+
+/* product screenshots */
+.shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;align-items:start}
+.shot{margin:0}
+.shot .frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface);box-shadow:0 10px 30px rgba(20,24,43,.12)}
+.shot .bar{display:flex;gap:6px;padding:9px 12px;background:var(--navy-soft);border-bottom:1px solid var(--line)}
+.shot .bar i{width:9px;height:9px;border-radius:50%;background:#B7BCDD;display:block}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{margin-top:12px;color:var(--muted);font-size:15px}
+.shot figcaption b{display:block;color:var(--ink);font:600 17px var(--body);margin-bottom:2px}
+@media (max-width:860px){.shots{grid-template-columns:minmax(0,1fr)}}
+
+/* ===== rebuild: richer home page ===== */
+.hero{background:linear-gradient(180deg,var(--navy-soft) 0,var(--bg) 100%)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero{background:linear-gradient(180deg,#151a3d 0,var(--bg) 100%)}}
+:root[data-theme="dark"] .hero{background:linear-gradient(180deg,#151a3d 0,var(--bg) 100%)}
+.built-for{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:26px;font-size:13px;color:var(--muted)}
+.built-for span{font-weight:600;letter-spacing:1.6px;text-transform:uppercase;font-size:11px}
+.built-for ul{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.built-for li{border:1px solid var(--line);background:var(--surface);padding:4px 12px;border-radius:999px;font-size:13px;color:var(--ink)}
+.hero-visual{position:relative}
+.hero-visual .frame{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface);box-shadow:0 24px 60px rgba(20,24,43,.22)}
+.hero-visual .bar{display:flex;gap:6px;padding:9px 12px;background:var(--navy-soft);border-bottom:1px solid var(--line)}
+.hero-visual .bar i{width:9px;height:9px;border-radius:50%;background:#B7BCDD;display:block}
+.hero-visual img{display:block;width:100%;height:auto}
+.hero-visual .chips{position:absolute;left:-14px;bottom:-18px;display:flex;flex-wrap:wrap;gap:8px;max-width:92%}
+.hero-visual .chips span{background:var(--navy);color:#fff;font:600 13px var(--body);padding:8px 14px;border-radius:999px;box-shadow:0 8px 22px rgba(20,24,43,.3)}
+.hero-visual .chips span:nth-child(2){background:var(--cta);color:var(--cta-ink)}
+@media (max-width:860px){.hero-visual .chips{left:8px;bottom:-16px}}
+.stats{padding-block:34px;border-bottom:1px solid var(--line)}
+.stats .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.stats b{display:block;font:700 40px/1 var(--display);color:var(--navy)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .stats b{color:var(--gold)}}
+:root[data-theme="dark"] .stats b{color:var(--gold)}
+.stats span{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
+@media (max-width:760px){.stats .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px}}
+.benefits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.benefit{border:1px solid #3A4380;background:rgba(255,255,255,.05);border-radius:8px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.benefit i{font:700 12px var(--body);letter-spacing:2px;color:var(--gold);font-style:normal}
+.benefit h3{font-size:24px;color:#fff}
+.benefit p{color:var(--navy-soft);font-size:15px}
+@media (max-width:980px){.benefits{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.benefits{grid-template-columns:minmax(0,1fr)}}
+.cmp{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
+.cmp .r{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr) minmax(0,1.2fr);border-top:1px solid var(--line)}
+.cmp .r:first-child{border-top:0}
+.cmp .r>div{padding:16px 20px;font-size:15px}
+.cmp .h{background:var(--navy);color:#fff;font:600 13px var(--body);letter-spacing:1.4px;text-transform:uppercase}
+.cmp .h>div{font:600 13px var(--body)}
+.cmp .k{font-weight:600}
+.cmp .o{color:var(--muted)}
+.cmp .w{color:var(--ink);background:rgba(232,145,45,.10)}
+.cmp .w::before{content:"\2713  ";color:var(--accent);font-weight:700}
+@media (max-width:760px){.cmp .r{grid-template-columns:minmax(0,1fr)}.cmp .h{display:none}.cmp .r>div{padding:8px 18px}.cmp .k{padding-top:16px!important}.cmp .o::before{content:"Many school ERPs: ";font-weight:600}.cmp .w{margin:0 0 12px}}
+.modules{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.mod{border:1px solid var(--line);border-top:3px solid var(--navy);background:var(--surface);border-radius:8px;padding:18px 20px 22px}
+.mod h3{font:700 18px var(--display)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mod{border-top-color:var(--gold)}}
+:root[data-theme="dark"] .mod{border-top-color:var(--gold)}
+.appsec{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center}
+.ticks{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+.ticks li{position:relative;padding-left:30px;color:var(--navy-soft);font-size:16px}
+.ticks li::before{content:"\2713";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--cta);color:var(--cta-ink);font:700 12px/20px var(--body);text-align:center}
+.phone{width:min(300px,100%);margin-inline:auto;border:8px solid #0A0C1A;border-radius:34px;background:#F4F5FB;color:#14182B;padding:18px 14px 20px;box-shadow:0 24px 50px rgba(0,0,0,.35)}
+.phone .ph-top{font:700 16px var(--display);margin:2px 4px 12px}
+.phone .ph-top small{display:block;font:500 11px var(--body);color:#5A5F78}
+.phone .tile{background:#fff;border-radius:12px;padding:12px 14px;margin-bottom:9px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;box-shadow:0 1px 0 #E3E5F2}
+.phone .tile b{font-weight:600}
+.phone .tile span{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:#E7F6EC;color:#17603A}
+.phone .tile span.due{background:#FFF1DE;color:#8A4B00}
+.phone .tile span.nt{background:#E8EAF6;color:#1F2A6B}
+.phone .ph-note{text-align:center;font-size:10px;color:#6B7088;margin-top:4px}
+@media (max-width:860px){.appsec{grid-template-columns:minmax(0,1fr);gap:34px}}
+.secure{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.sec-card{border-top:2px solid var(--navy);padding:16px 0 4px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sec-card{border-top-color:var(--gold)}}
+:root[data-theme="dark"] .sec-card{border-top-color:var(--gold)}
+.sec-card h3{font:700 19px var(--display);margin-bottom:6px}
+.sec-card p{color:var(--muted);font-size:15px}
+@media (max-width:860px){.secure{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.secure{grid-template-columns:minmax(0,1fr)}}
+.fit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.fit-card{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:20px 22px}
+.fit-card h3{font:700 19px var(--display);margin-bottom:6px}
+.fit-card p{color:var(--muted);font-size:15px}
+@media (max-width:860px){.fit{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.fit{grid-template-columns:minmax(0,1fr)}}
+.cta-band{background:var(--cta);color:var(--cta-ink);padding-block:44px}
+.cta-band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 30px}
+.cta-band h2{font-size:clamp(26px,3.6vw,36px);line-height:1.1;max-width:20em}
+.cta-band .btn{background:var(--deep);color:#fff}
+.cta-band .btn:hover{filter:brightness(1.25)}
 </style>
 </head>
 <body>
@@ -227,6 +319,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
     <a class="logo" href="#top" aria-label="SVM EdTech home"><svg viewBox="0 0 64 64" aria-hidden="true"><rect class="sq" x="4" y="4" width="16" height="16" rx="3"/><rect class="sq" x="24" y="4" width="16" height="16" rx="3"/><rect class="gd" x="44" y="4" width="16" height="16" rx="3"/><rect class="sq" x="4" y="24" width="16" height="16" rx="3"/><rect class="sq" x="24" y="24" width="16" height="16" rx="3"/><rect class="sq" x="44" y="24" width="16" height="16" rx="3"/><rect class="sq" x="4" y="44" width="16" height="16" rx="3"/><rect class="sq" x="24" y="44" width="16" height="16" rx="3"/><rect class="sq" x="44" y="44" width="16" height="16" rx="3"/></svg><span class="nm"><b>SVM</b><span>EDTECH</span></span></a>
     <nav class="nav" aria-label="Main">
       <a href="#modules">What you get</a>
+      <a href="#why">Why us</a>
       <a href="#packages">Packages</a>
       <a href="#about">About</a>
       <a href="#faq">Questions</a>
@@ -239,22 +332,29 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 <section class="hero">
   <div class="wrap">
     <div>
-      <div class="eyebrow">School ERP · Website · Accounting</div>
+      <div class="eyebrow">School ERP · Accounting · Parent app</div>
       <h1>One system for the whole school.</h1>
-      <p class="lede">Admissions, fees, accounts, attendance, exams, payroll and a parent app, in one place. Designed by someone who has spent 15 years working with school ERP systems.</p>
+      <p class="lede">Admissions, fees, accounts, attendance, exams, payroll and a parent app in one place. Built for schools in Andhra Pradesh and across India by someone with 15 years in school ERP.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="#contact">Book a demo</a>
+        <a class="btn btn-primary" href="#contact">Book a free demo</a>
+        <a class="btn btn-ghost" href="#modules">See what you get</a>
       </div>
-      <p class="proof">Built and used in a live school, Raghavan EM High School, and available to other schools as their own separate app.</p>
+      <div class="built-for"><span>Built for</span><ul><li>State Board</li><li>CBSE &amp; ICSE</li><li>KG &amp; primary</li><li>Aided &amp; private</li><li>Rural &amp; budget schools</li></ul></div>
+      <p class="proof">Built and used in a live school, Raghavan EM High School, and available to other schools as their own separate app. Ask for a free trial login after the demo.</p>
     </div>
-    <aside class="demo-card" aria-label="Book a demo">
-      <div class="eyebrow">Free demo for your school</div>
-      <h2>See it working with your own questions.</h2>
-      <p>We show the ERP on a live demo and answer what your school needs. One login, three kinds of user. Each sees only their own part of the school.</p>
-      <ul class="roles"><li>Admin</li><li>Staff</li><li>Parents</li></ul>
-      <div class="url">venu@svmedtech.com</div>
-      <a class="btn btn-primary" href="#contact">Request a demo</a>
-    </aside>
+    <div class="hero-visual">
+      <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/dashboard.png" width="800" height="499" alt="SVM EdTech ERP dashboard showing total strength, fee collection shortcuts and today's alerts"></div>
+      <div class="chips"><span>Admin</span><span>Staff</span><span>Parents</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="At a glance">
+  <div class="wrap grid">
+    <div><b>15</b><span>years working with school ERP systems</span></div>
+    <div><b>8</b><span>areas of the school in one login</span></div>
+    <div><b>3</b><span>kinds of login: Admin, Staff and Parents</span></div>
+    <div><b>1</b><span>own app and database for every school</span></div>
   </div>
 </section>
 
@@ -265,16 +365,32 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
   </div>
 </section>
 
+<section id="screens" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">See it</div>
+      <h2>The real ERP, not a mock-up.</h2>
+      <p>Screens from our live demo school. All data shown is sample data.</p>
+    </div>
+    <div class="shots">
+      <figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/dashboard.png" width="800" height="499" loading="lazy" alt="SVM EdTech ERP dashboard showing total strength, fee collection shortcuts and today's alerts"></div><figcaption><b>One dashboard for the day</b>Strength, fee dues, attendance follow-ups and new enquiries, on one screen.</figcaption></figure>
+      <figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/attendance.png" width="800" height="670" loading="lazy" alt="SVM EdTech ERP attendance screen with classes, sections and student counts"></div><figcaption><b>Attendance by class and section</b>Mark attendance, see reports, holidays and low-attendance students.</figcaption></figure>
+    </div>
+    <p class="fine"><a href="#contact">Book a demo</a> and we will walk you through it live.</p>
+  </div>
+</section>
+
 <section class="band-navy" id="what">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">What your school gets</div>
-      <h2>Run the school, keep the accounts, stay in touch with parents.</h2>
+      <h2>Run the school, collect the fees, keep the accounts, stay in touch with parents.</h2>
     </div>
-    <div class="three">
-      <div><h3>Run</h3><p>Students, attendance for pupils and staff, exams and results, admissions and the timetable, without spreadsheets.</p></div>
-      <div><h3>Account</h3><p>Fee receipts, payment vouchers, cost centres and payroll with EPF and ESI. An accounts section many school ERPs leave out.</p></div>
-      <div><h3>Connect</h3><p>Parents see fees, attendance and notices on their phone.</p></div>
+    <div class="benefits">
+      <div class="benefit"><i>01</i><h3>Run</h3><p>Students, attendance for pupils and staff, exams and results, admissions and the timetable, without spreadsheets.</p></div>
+      <div class="benefit"><i>02</i><h3>Collect</h3><p>Fee receipts, balances, concessions and refunds, with UPI payments that parents report and the office verifies.</p></div>
+      <div class="benefit"><i>03</i><h3>Account</h3><p>Payment vouchers, cost centres and payroll with EPF and ESI. An accounts section many school ERPs leave out.</p></div>
+      <div class="benefit"><i>04</i><h3>Connect</h3><p>Parents see attendance, fees, notices and results on their phone, with one login for all their children.</p></div>
     </div>
   </div>
 </section>
@@ -283,17 +399,83 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Everything in one place</div>
-      <h2>Eight areas of the school, one login.</h2>
+      <h2>Twelve parts of the school, one login.</h2>
+      <p>Take all of it, or only the modules you need.</p>
     </div>
     <div class="modules">
-      <div class="mod"><h3>Admissions and students</h3><p>Enquiry to enrolment, student records and class lists.</p></div>
-      <div class="mod"><h3>Attendance</h3><p>Pupils and staff. Biometric device sync is optional.</p></div>
-      <div class="mod"><h3>Fees and receipts</h3><p>Collection, balances and receipts. Parents can report UPI payments for the school to verify.</p></div>
+      <div class="mod"><h3>Admissions and students</h3><p>Enquiry to enrolment, student records, class lists and bulk import from Excel.</p></div>
+      <div class="mod"><h3>Attendance</h3><p>Pupils and staff, with reports, holidays and low-attendance follow-up. Biometric device sync is optional.</p></div>
+      <div class="mod"><h3>Fees and receipts</h3><p>Collection, concessions, refunds and balances, with numbered receipts and year-wise history.</p></div>
       <div class="mod"><h3>Accounting</h3><p>Payment vouchers, cost centres and an overview of the school's total position.</p></div>
-      <div class="mod"><h3>Staff and payroll</h3><p>EPF and ESI, leave and loss of pay, leave statements for teachers, optional posting of salaries to Accounting.</p></div>
-      <div class="mod"><h3>Exams and results</h3><p>Subjects, exams and result sheets.</p></div>
-      <div class="mod"><h3>Facilities</h3><p>Timetable, transport, inventory, library and hostel.</p></div>
-      <div class="mod"><h3>Logins by role</h3><p>Admin, staff and parents each see only their own part. Installs like an app on a phone.</p></div>
+      <div class="mod"><h3>Staff and payroll</h3><p>EPF and ESI, leave and loss of pay, payslips and leave statements, with optional posting to Accounting.</p></div>
+      <div class="mod"><h3>Exams and report cards</h3><p>Subjects, exams, marks entry, grading scales and report cards. Marks stay hidden from parents until released.</p></div>
+      <div class="mod"><h3>Hall tickets and room allotment</h3><p>Hall ticket numbers, room allotment per session and printable hall tickets, with an optional hold while fees are due.</p></div>
+      <div class="mod"><h3>Timetable and teachers</h3><p>Class timetables, subject allotments and a simple daily view for each teacher.</p></div>
+      <div class="mod"><h3>Transport, library, hostel and inventory</h3><p>Routes and bus passes, books, hostel rooms and stock with sales to students.</p></div>
+      <div class="mod"><h3>Notices and communication</h3><p>Notices targeted to classes, parents and staff, with a notification centre.</p></div>
+      <div class="mod"><h3>Reports and insights</h3><p>Dashboards and ready reports for fees, attendance, results and staff, plus certificates and ID cards.</p></div>
+      <div class="mod"><h3>Logins by role</h3><p>Admin, Principal, teachers, office staff and parents each see only their own part. Installs like an app on a phone.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why schools choose SVM EdTech</div>
+      <h2>Complete, careful, and close to the person who builds it.</h2>
+      <p>Most school ERPs feel half finished and slow to change. This is how SVM EdTech is different.</p>
+    </div>
+    <div class="cmp" role="table" aria-label="How SVM EdTech differs from many school ERPs">
+      <div class="r h" role="row"><div></div><div>Many school ERPs</div><div>SVM EdTech</div></div>
+      <div class="r" role="row"><div class="k">Accounts</div><div class="o">No real accounts section for management.</div><div class="w">Fees and accounting live together, so the office and management see the same numbers.</div></div>
+      <div class="r" role="row"><div class="k">Changes you ask for</div><div class="o">A ticket queue, months of waiting, sometimes never.</div><div class="w">Goes to the person who writes the software.</div></div>
+      <div class="r" role="row"><div class="k">Attendance and marks</div><div class="o">Can be quietly edited later.</div><div class="w">Locked once entered. Teachers request a correction and the Admin or Principal approves it.</div></div>
+      <div class="r" role="row"><div class="k">Your data</div><div class="o">Shared with other schools on one system.</div><div class="w">Your own app and database, with a full backup you can download any time.</div></div>
+      <div class="r" role="row"><div class="k">Fees and hall tickets</div><div class="o">Handled by hand at exam time.</div><div class="w">An optional hold while fees are due, with every exception recorded.</div></div>
+      <div class="r" role="row"><div class="k">What you pay for</div><div class="o">A fixed bundle.</div><div class="w">Website and ERP, ERP alone, or only the modules you choose.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band-navy" id="parents">
+  <div class="wrap appsec">
+    <div>
+      <div class="eyebrow">Parents and staff</div>
+      <h2 style="font-size:clamp(30px,4.4vw,42px);line-height:1.1;letter-spacing:-.8px;margin:12px 0 14px">An app on every phone, nothing to install from a store.</h2>
+      <p style="color:var(--navy-soft);font-size:17px;max-width:34em">Parents, teachers and the office open the school's own address and install it like an app. Each person sees only their own part of the school.</p>
+      <ul class="ticks">
+        <li>Attendance, fee balance and notices on one simple home page</li>
+        <li>Marks and report cards, once the school releases them</li>
+        <li>Exam timetable and hall ticket status</li>
+        <li>All of a family's children under one login</li>
+        <li>UPI fee payments that the parent reports and the office verifies</li>
+      </ul>
+    </div>
+    <div class="phone" role="img" aria-label="Illustration of a parent's phone home screen">
+      <div class="ph-top">Home<small>Illustration</small></div>
+      <div class="tile"><b>Attendance today</b><span>Present</span></div>
+      <div class="tile"><b>Fee balance</b><span class="due">Due</span></div>
+      <div class="tile"><b>New notice</b><span class="nt">Read</span></div>
+      <div class="tile"><b>Marks</b><span class="nt">Released</span></div>
+      <div class="ph-note">Each school's own colours and logo</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Safe by design</div>
+      <h2>Careful with your school's data.</h2>
+    </div>
+    <div class="secure">
+      <div class="sec-card"><h3>Roles and permissions</h3><p>Admin, Principal, teachers, office staff and parents each see only what they should.</p></div>
+      <div class="sec-card"><h3>Locked attendance and marks</h3><p>Once entered, they stay put. Corrections go through approval by the Admin or Principal.</p></div>
+      <div class="sec-card"><h3>Two-step sign-in</h3><p>Optional extra protection for the Admin and Principal accounts.</p></div>
+      <div class="sec-card"><h3>Your own database</h3><p>Every school has its own app and database, never shared with another school.</p></div>
+      <div class="sec-card"><h3>Backups</h3><p>Automatic backups, and a full data backup you can download whenever you like.</p></div>
+      <div class="sec-card"><h3>A record of changes</h3><p>Important actions such as refunds, deletions and fee exceptions are recorded with who did them.</p></div>
     </div>
   </div>
 </section>
@@ -301,13 +483,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 <section style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Why schools choose SVM EdTech</div>
-      <h2>Complete, and close to the person who builds it.</h2>
+      <div class="eyebrow">A fit for your school</div>
+      <h2>Schools of every kind and size.</h2>
     </div>
-    <div class="why">
-      <div class="why-item"><h3>Complete, not half-built.</h3><p>Fees and accounting live together, so the office and the management see the same numbers.</p></div>
-      <div class="why-item"><h3>A direct line to the builder.</h3><p>Changes you ask for go to the person who writes the software, not a ticket queue.</p></div>
-      <div class="why-item"><h3>Take only what you need.</h3><p>Website and ERP together, ERP alone, or ERP with the modules you choose. Each school gets its own separate app and database.</p></div>
+    <div class="fit">
+      <div class="fit-card"><h3>State Board and English-medium</h3><p>Subjects, exams, grading scales and report cards set the way your school already works.</p></div>
+      <div class="fit-card"><h3>CBSE and ICSE</h3><p>Your own exam structure, grading scale and report card templates, not a fixed format.</p></div>
+      <div class="fit-card"><h3>KG and primary</h3><p>Simple admissions, attendance and fee receipts, with a parent view that is easy to use.</p></div>
+      <div class="fit-card"><h3>Aided and private schools</h3><p>Fees, accounts and payroll with EPF and ESI in one place, so management sees the full picture.</p></div>
+      <div class="fit-card"><h3>Rural and budget schools</h3><p>Runs on an ordinary smartphone and installs like an app. Pay only for the modules you use.</p></div>
+      <div class="fit-card"><h3>Schools with several branches</h3><p>One ERP for every branch. Branch staff see their own branch, and management sees all of them.</p></div>
     </div>
   </div>
 </section>
@@ -319,7 +504,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <h2>From first call to a school that runs on it.</h2>
     </div>
     <ol class="steps">
-      <li><h3>See the demo</h3><p>We show the ERP on a live demo, around the questions your school has.</p></li>
+      <li><h3>See it and try it</h3><p>We show a live demo around your school's questions, then give your team a time-limited trial login to test every view.</p></li>
       <li><h3>Choose a package</h3><p>Website and ERP, ERP only, or the modules you pick.</p></li>
       <li><h3>We set it up</h3><p>Your own app and database, in your school's colours and logo.</p></li>
       <li><h3>Your school goes live</h3><p>Staff, parents and the office start using it, with a direct line to us for changes.</p></li>
@@ -355,15 +540,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
   </div>
 </section>
 
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="split">
-      <div><h3>Your school, your data</h3><p>Every school gets its own app and its own database. A full data backup can be downloaded at any time.</p></div>
-      <div><h3>More than one branch</h3><p>Run several branches in one ERP. Branch staff see their own branch, and management can see all of them.</p></div>
-    </div>
-  </div>
-</section>
-
 <section class="band-navy" id="about">
   <div class="wrap about">
     <div>
@@ -372,7 +548,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
     </div>
     <div>
       <p>SVM EdTech is run by Venu Madhav Sankavaram, Founder. For 15 years he has worked with school ERP systems, and kept meeting the same problems: products that feel half finished, changes that take months or never arrive, and no real accounts section for the management.</p>
-      <p>So he built one that covers the whole school, from admissions to accounts, and stays open to the changes each school asks for. SVM EdTech is based in B Kotha Kota, Andhra Pradesh.</p>
+      <p>So he built one that covers the whole school, from admissions to accounts, and stays open to the changes each school asks for. SVM EdTech is based in Andhra Pradesh and works with schools across the state and the rest of India.</p>
     </div>
   </div>
 </section>
@@ -384,6 +560,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <h2>Before you book a demo.</h2>
     </div>
     <div class="faq">
+      <details><summary>Can we try it before we decide?</summary><p>Yes. After the demo we can create a time-limited trial login for your school, with a login for each role (Admin, Staff and Parents), so your team can test every view.</p></details>
+      <details><summary>Which boards does it work for?</summary><p>Any. Grading scales, exam structure and report card layouts are set by your school, so State Board, CBSE and ICSE schools can all use it.</p></details>
+      <details><summary>Can you move our existing student data in?</summary><p>Yes. Student records can be imported from an Excel template, and we help you check them before your school goes live.</p></details>
       <details><summary>Is our data kept separate from other schools?</summary><p>Yes. Every school gets its own app and its own database, and a full data backup can be downloaded at any time.</p></details>
       <details><summary>We already have a school website. Do we need the website package?</summary><p>No. Choose ERP only. The website package is for schools that also want a new website in their own colours and logo.</p></details>
       <details><summary>Can parents and teachers use it on a phone?</summary><p>Yes. Admin, staff and parents each get their own login and see only their own part. It installs like an app on a phone.</p></details>
@@ -391,6 +570,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <details><summary>How does payment work?</summary><p>There is a one-time setup fee and a yearly fee. Setup and the first year are paid at signing, then the yearly fee each year. You get the full quote after the demo, and GST is extra.</p></details>
       <details><summary>How much does it cost?</summary><p>It depends on your school's size and which package or modules you choose. Message us and we will send a quote after the demo.</p></details>
     </div>
+  </div>
+</section>
+
+<section class="cta-band" aria-label="Book a demo">
+  <div class="wrap">
+    <h2>See it working with your own school's questions.</h2>
+    <a class="btn" href="#contact">Book a free demo</a>
   </div>
 </section>
 
@@ -418,7 +604,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
     </div>
     <dl class="details">
       <div><dt>Email</dt><dd id="v-mail">venu@svmedtech.com</dd><button class="copy" type="button" data-copy="venu@svmedtech.com">Copy</button></div>
-      <div><dt>Based in</dt><dd>B Kotha Kota, Andhra Pradesh</dd><span></span></div>
+      <div><dt>Based in</dt><dd>Andhra Pradesh, India</dd><span></span></div>
     </dl>
   </div>
 </section>
@@ -457,7 +643,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 (function(){
   /* Schools strip: reads /schools.json. Add a school by adding one line there. */
   var t=document.getElementById('schTrack');if(!t||!window.fetch)return;
-  fetch('/schools.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(list){
+  /* Source 1: the Admin dashboard (schools ticked "Show on website"). Source 2: /schools.json, used when the dashboard is unreachable or nothing is ticked yet. */
+  var load=function(u,o){return fetch(u,o).then(function(r){return r.ok?r.json():null}).then(function(l){return Array.isArray(l)&&l.length?l:null}).catch(function(){return null})};
+  load('https://admin.svmedtech.com/api/public/schools').then(function(l){return l||load('/schools.json',{cache:'no-cache'})}).then(function(list){
     if(!list||!list.length)return;
     var mk=function(s){var a=document.createElement(s.url?'a':'div');a.className='sch';if(s.url){a.href=s.url;a.rel='noopener'}
       var b=document.createElement('b');b.textContent=s.name;a.appendChild(b);
