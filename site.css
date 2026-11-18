@@ -338,3 +338,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 .ctaband .wrap{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
 .ctaband h2{font-size:clamp(26px,4vw,36px);line-height:1.12;max-width:20em}
 .ctaband p{color:var(--navy-soft);margin-top:10px}
+
+.wa-float{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:26;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(20,24,43,.35);transition:transform .15s}
+.wa-float:hover{transform:scale(1.06)}
+@media (max-width:520px){.wa-float{left:auto;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(max(16px,env(safe-area-inset-bottom,0px)) + 68px)}}
+a.copy{display:inline-block;text-decoration:none}
+.details dd a{color:inherit;text-decoration:underline}
