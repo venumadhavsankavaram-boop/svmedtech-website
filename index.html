@@ -253,7 +253,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 .hero-visual .frame{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface);box-shadow:0 24px 60px rgba(20,24,43,.22)}
 .hero-visual .bar{display:flex;gap:6px;padding:9px 12px;background:var(--navy-soft);border-bottom:1px solid var(--line)}
 .hero-visual .bar i{width:9px;height:9px;border-radius:50%;background:#B7BCDD;display:block}
-.hero-visual img{display:block;width:100%;height:auto}
+.hero-visual img,.hero-visual video{display:block;width:100%;height:auto;background:#1a2160}
+.hero-visual .frame{position:relative}
+.vidtoggle{position:absolute;right:10px;top:44px;background:rgba(20,24,43,.78);color:#fff;border:0;border-radius:999px;font:600 12px var(--body);padding:6px 14px;cursor:pointer}
+.vidsound{position:absolute;left:10px;top:42px;background:var(--cta);color:#14182b;border:0;border-radius:999px;font:700 12.5px var(--body);padding:7px 15px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.vidsound:hover{filter:brightness(1.07)}
+.vidtoggle:hover{background:rgba(20,24,43,.95)}
 .hero-visual .chips{position:absolute;left:-14px;bottom:-18px;display:flex;flex-wrap:wrap;gap:8px;max-width:92%}
 .hero-visual .chips span{background:var(--navy);color:#fff;font:600 13px var(--body);padding:8px 14px;border-radius:999px;box-shadow:0 8px 22px rgba(20,24,43,.3)}
 .hero-visual .chips span:nth-child(2){background:var(--cta);color:var(--cta-ink)}
@@ -447,7 +452,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <p class="proof">Built and used in a live school, Raghavan EM High School, and available to other schools as their own separate app. Ask for a free trial login after the demo.</p>
     </div>
     <div class="hero-visual">
-      <div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/dashboard.png" width="800" height="499" alt="SVM EdTech ERP dashboard showing total strength, fee collection shortcuts and today's alerts"></div>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i></div><video id="heroVid" src="/video/svm-edtech-walkthrough.mp4" poster="/video/poster.jpg" width="1280" height="720" muted loop playsinline autoplay preload="metadata" aria-label="A 35 second silent walkthrough of the SVM EdTech ERP: dashboard, fees, attendance, accounts, report cards, and the teacher and parent apps"></video><button type="button" class="vidtoggle" id="vidToggle" aria-label="Pause the video">Pause</button><button type="button" class="vidsound" id="vidSound">&#128266; Watch with sound</button></div>
       <div class="chips"><span>Admin</span><span>Staff</span><span>Parents</span></div>
     </div>
   </div>
@@ -1032,6 +1037,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
     ['Crash recovery from backup',0,'self','charged','within 48 hours','within 24 hours'],
     ['Yearly health check and restore test',0,0,0,0,1]
   ]);
+})();
+</script>
+<script>
+(function(){
+  var v=document.getElementById('heroVid'),b=document.getElementById('vidToggle');if(!v||!b)return;
+  function label(){var p=v.paused;b.textContent=p?'Play':'Pause';b.setAttribute('aria-label',p?'Play the video':'Pause the video')}
+  try{if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause()}}catch(e){}
+  var sb=document.getElementById('vidSound');
+  if(sb)sb.addEventListener('click',function(){if(v.muted){v.muted=false;v.currentTime=0;var r=v.play();if(r&&r.catch)r.catch(function(){v.muted=true});sb.textContent='\uD83D\uDD07 Mute'}else{v.muted=true;sb.textContent='\uD83D\uDD0A Watch with sound'}});
+  b.addEventListener('click',function(){if(v.paused){var r=v.play();if(r&&r.catch)r.catch(function(){})}else{v.pause()}label()});
+  v.addEventListener('play',label);v.addEventListener('pause',label);label();
 })();
 </script>
 </body>
