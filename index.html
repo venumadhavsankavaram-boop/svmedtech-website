@@ -353,6 +353,67 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 .brochure p{color:var(--navy-soft);margin-top:10px}
 .brochure .lead-form{margin-top:0}
 @media (max-width:860px){.brochure{grid-template-columns:minmax(0,1fr)}}
+
+/* ---- Pricing, apps band, website-from-ERP ---- */
+.fromp{margin:14px 0 0;font-size:15px;color:var(--muted)}
+.fromp b{color:var(--ink)}
+.apps-sec{background:linear-gradient(135deg,#171f5c 0%,#3a2fb5 60%,#0f9d8a 135%);color:#fff;padding-top:clamp(48px,7vw,84px);padding-bottom:clamp(48px,7vw,84px);position:relative;overflow:hidden}
+.apps-sec::before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;background:rgba(232,145,45,.30);filter:blur(80px);right:-140px;top:-140px;pointer-events:none}
+.apps-sec>.wrap{position:relative}
+.apps-sec .eyebrow{color:var(--gold)}
+.apps-sec .sec-head h2,.apps-sec .apps-group h3,.apps-sec .apph figcaption b{color:#fff}
+.apps-sec .sec-head p,.apps-sec .apps-group p,.apps-sec .apph figcaption,.apps-sec .fine{color:#DCE1FF}
+.apps-sec .fine a{color:var(--gold)}
+.apps-sec .apph .scr{border-color:#0B0F2A;box-shadow:0 22px 46px rgba(0,0,0,.45)}
+.apps-sec .apph{transition:transform .2s}
+.apps-sec .apph:hover{transform:translateY(-6px)}
+.ptag{display:inline-block;background:var(--gold);color:#14182B;font:700 12px var(--body);letter-spacing:.3px;padding:4px 12px;border-radius:999px;margin:0 0 8px}
+.apps-group .tagrow{text-align:center}
+.apps-sec .apps-group h3{font:700 26px var(--display)}
+.web-flow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:22px;align-items:center;margin-top:30px}
+.web-box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px;min-width:0}
+.web-box h3{font-size:20px;margin-bottom:10px}
+.web-box ul{margin:0;padding-left:20px;color:var(--muted);font-size:15px}
+.web-box li{padding:2px 0}
+.web-arrow{font:700 40px var(--display);color:var(--cta);text-align:center}
+@media (max-width:760px){.web-flow{grid-template-columns:minmax(0,1fr)}.web-arrow{transform:rotate(90deg)}}
+.pr-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;align-items:stretch}
+@media (max-width:1100px){.pr-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:700px){.pr-grid{grid-template-columns:minmax(0,1fr)}}
+.pr-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px 18px;display:flex;flex-direction:column;position:relative;min-width:0}
+.pr-card.hot{border:2px solid var(--cta);box-shadow:0 10px 30px rgba(232,145,45,.22)}
+.pr-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--cta);color:var(--cta-ink);font:700 11px var(--body);padding:3px 12px;border-radius:999px;white-space:nowrap}
+.pr-card h3{font-size:22px}
+.pr-for{color:var(--muted);font-size:14px;margin:4px 0 12px;min-height:3em}
+.pr-price{font:700 36px var(--display);color:var(--navy);line-height:1}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pr-price{color:var(--gold)}}
+:root[data-theme="dark"] .pr-price{color:var(--gold)}
+.pr-price small{display:block;font:500 13px var(--body);color:var(--muted);margin-top:4px}
+.pr-setup{font-size:13.5px;color:var(--muted);margin:10px 0 12px;padding-bottom:12px;border-bottom:1px dashed var(--line)}
+.pr-setup b{color:var(--ink)}
+.pr-card ul{list-style:none;margin:0 0 14px;padding:0;font-size:14px;flex:1}
+.pr-card li{padding:3px 0 3px 22px;position:relative}
+.pr-card li::before{content:"\2714";position:absolute;left:0;color:#0F9D6A;font-weight:700}
+.pr-card .btn{align-self:stretch}
+.pr-note{text-align:center;color:var(--muted);font-size:14px;margin:18px auto 0;max-width:760px}
+.pr-note b{color:var(--ink)}
+.pr-sub{margin-top:54px}
+.pr-sub h3{font-size:clamp(22px,3vw,30px);text-align:center}
+.pr-sub>p{text-align:center;color:var(--muted);max-width:640px;margin:8px auto 0}
+.pr-calc{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px;margin-top:20px}
+.pr-nbox{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;font-weight:600}
+.pr-nbox input[type=number]{width:120px;font:700 22px var(--display);padding:6px 10px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink)}
+.pr-calc input[type=range]{width:100%;accent-color:var(--cta);margin:12px 0}
+.pr-scroll{overflow-x:auto;margin-top:12px}
+.pr-table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:620px}
+.pr-table th,.pr-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+.pr-table th{font:700 14px var(--display);background:var(--navy-soft);color:#1F2A6B}
+.pr-table td.n,.pr-table th.n{text-align:right;white-space:nowrap}
+.pr-table tr.hotrow td{font-weight:700}
+.pr-cmp td:not(:first-child),.pr-cmp th:not(:first-child){text-align:center}
+.pr-cmp .grp td{background:var(--navy-soft);color:#1F2A6B;font:700 14px var(--display)}
+.pr-yes{color:#0F9D6A;font-weight:700}.pr-no{color:var(--muted)}
+.pr-fine{font-size:13.5px;color:var(--muted);margin-top:10px}
 </style>
 </head>
 <body>
@@ -362,7 +423,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
     <nav class="nav" aria-label="Main">
       <a href="#modules">What you get</a>
       <a href="#why">Why us</a>
-      <a href="#packages">Packages</a>
+      <a href="#packages">Pricing</a>
       <a href="#about">About</a>
       <a href="#faq">Questions</a>
       <a class="btn btn-primary" href="#contact">Book a demo</a>
@@ -382,6 +443,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
         <a class="btn btn-ghost" href="#modules">See what you get</a>
       </div>
       <div class="built-for"><span>Built for</span><ul><li>State Board</li><li>CBSE &amp; ICSE</li><li>KG &amp; primary</li><li>Aided &amp; private</li><li>Rural &amp; budget schools</li></ul></div>
+      <p class="fromp"><b>Plans from Rs 30 per student per year.</b> A free Starter plan for small schools, one-time setup, GST extra, no hidden charges. <a href="#packages">See the prices</a></p>
       <p class="proof">Built and used in a live school, Raghavan EM High School, and available to other schools as their own separate app. Ask for a free trial login after the demo.</p>
     </div>
     <div class="hero-visual">
@@ -425,16 +487,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
   </div>
 </section>
 
-<section id="apps" style="padding-top:0">
+<section id="apps" class="apps-sec">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">In their hands</div>
-      <h2>A simple app for teachers and for parents.</h2>
-      <p>Both work on any phone. Screens from our live demo school, with sample data.</p>
+      <h2>Two apps teachers and parents will actually use.</h2>
+      <p>No app-store download. Open your school's link once, add it to the home screen, and it works like an app on any phone. Screens from our live demo school, with sample data.</p>
     </div>
     <div class="apps-group">
-      <h3>Teachers</h3>
-      <p>Take attendance, enter marks and share homework in a few taps.</p>
+      <div class="tagrow"><span class="ptag">TEACHER APP &middot; from the Core plan</span></div>
+      <h3>Teachers finish in minutes, not hours</h3>
+      <p>Take attendance, enter marks and share homework in a few taps. Final Submit locks the marks.</p>
       <div class="apps">
         <figure class="apph"><div class="scr"><img src="/screens/app-teacher-home.jpg" width="432" height="816" loading="lazy" alt="Teacher app home with attendance, marks, homework and timetable"></div><figcaption><b>Everything in one place</b>Attendance, marks, homework, timetable.</figcaption></figure>
         <figure class="apph"><div class="scr"><img src="/screens/app-teacher-attendance.jpg" width="432" height="816" loading="lazy" alt="Teacher app attendance screen for a class with present and absent buttons"></div><figcaption><b>Attendance in seconds</b>Mark the class present or absent.</figcaption></figure>
@@ -442,7 +505,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       </div>
     </div>
     <div class="apps-group">
-      <h3>Parents</h3>
+      <div class="tagrow"><span class="ptag">PARENT APP &middot; from the Complete plan</span></div>
+      <h3>Parents stay in the loop, every day</h3>
       <p>Fees, homework, marks and notices, always up to date.</p>
       <div class="apps">
         <figure class="apph"><div class="scr"><img src="/screens/app-parent-home.jpg" width="432" height="816" loading="lazy" alt="Parent app home showing the child, class and teacher"></div><figcaption><b>Know what is happening</b>Child, class and class teacher at a glance.</figcaption></figure>
@@ -451,6 +515,22 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       </div>
     </div>
     <p class="fine"><a href="#contact">Book a demo</a> and try both apps yourself.</p>
+  </div>
+</section>
+
+<section id="website">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">One login, two systems</div>
+      <h2>Your school website is run from the ERP.</h2>
+      <p>No separate website login and no web designer to call for every change. Type it once in the ERP and it appears on your website.</p>
+    </div>
+    <div class="web-flow">
+      <div class="web-box"><h3>1. In the ERP</h3><ul><li>Banner and home page text</li><li>Notices and events</li><li>Gallery photos</li><li>Alumni and achievements</li><li>Privacy, fee and admission pages</li></ul></div>
+      <div class="web-arrow" aria-hidden="true">&rarr;</div>
+      <div class="web-box"><h3>2. On your school website</h3><ul><li>Updates by itself, in your colours and logo</li><li>Admission enquiries come straight back into the ERP</li><li>Your own web address, set up for you</li><li>Only what you mark as visible is shown</li></ul></div>
+    </div>
+    <p class="fine" style="text-align:center">Included in the Complete + Website plan. See one working: <a href="https://raghavanhighschool.com" rel="noopener">Raghavan EM High School</a>.</p>
   </div>
 </section>
 
@@ -507,7 +587,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <div class="r" role="row"><div class="k">Attendance and marks</div><div class="o">Can be quietly edited later.</div><div class="w">Locked once entered. Teachers request a correction and the Admin or Principal approves it.</div></div>
       <div class="r" role="row"><div class="k">Your data</div><div class="o">Shared with other schools on one system.</div><div class="w">Your own app and database, with a full backup you can download any time.</div></div>
       <div class="r" role="row"><div class="k">Fees and hall tickets</div><div class="o">Handled by hand at exam time.</div><div class="w">An optional hold while fees are due, with every exception recorded.</div></div>
-      <div class="r" role="row"><div class="k">What you pay for</div><div class="o">A fixed bundle.</div><div class="w">Website and ERP, ERP alone, or only the modules you choose.</div></div>
+      <div class="r" role="row"><div class="k">What you pay for</div><div class="o">A fixed bundle.</div><div class="w">Five clear plans, from free to everything. Pay per student, with setup shown once and no hidden charges.</div></div>
     </div>
     <div class="rel">
       <div class="rel-card">
@@ -524,13 +604,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
         <h3>Economical, by design</h3>
         <ul>
           <li><b>One system, not four.</b> Fees, accounting, attendance, exams, staff, and the teacher and parent apps work together, so you do not buy separate accounting or app software.</li>
-          <li><b>Pay for what you use.</b> Website and ERP, ERP alone, or only the modules you choose, and add more later.</li>
+          <li><b>Pay for what you use.</b> Start on Basic, move up to Core or Complete when you need more, and pay only the difference.</li>
           <li><b>No middlemen.</b> Changes you ask for are made by us, not queued behind a ticket desk or a reseller.</li>
           <li><b>Fewer manual jobs.</b> Fee reminders, receipts, reports and hall-ticket holds happen by themselves, so the office spends less time on repeat work.</li>
         </ul>
       </div>
     </div>
-    <p class="rel-note">We do not claim to be the cheapest. Tell us what your school needs, and we will send a written quote you can set beside any other, line by line.</p>
+    <p class="rel-note">Our prices are on this page, GST extra, with no hidden charges. Ask for a written quote and you can set it beside any other, line by line.</p>
   </div>
 </section>
 
@@ -611,28 +691,35 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 <section id="packages">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Choose your package</div>
-      <h2>Three ways to start.</h2>
-      <p>The price depends on the size of your school and the modules you choose. We quote after the demo.</p>
+      <div class="eyebrow">Pricing</div>
+      <h2>Simple prices. Pay per student.</h2>
+      <p>Start small and move up when you need more. Setup is paid once, and from the second year you pay only the yearly price.</p>
     </div>
-    <div class="plans">
-      <article class="plan">
-        <h3>Website and ERP</h3>
-        <p class="for">A school website and the full ERP, in the school's own colours and logo.</p>
-        <a class="btn btn-primary" href="#contact">Ask for a quote</a>
-      </article>
-      <article class="plan">
-        <h3>ERP only</h3>
-        <p class="for">The complete ERP for schools that already have a website.</p>
-        <a class="btn btn-primary" href="#contact">Ask for a quote</a>
-      </article>
-      <article class="plan">
-        <h3>Pick your modules</h3>
-        <p class="for">Start with students, attendance, fees and exams, and add more later.</p>
-        <a class="btn btn-primary" href="#contact">Ask for a quote</a>
-      </article>
+    <div class="pr-grid" id="prGrid"></div>
+    <p class="pr-note">Prices are per student per year. <b>GST is extra</b> and shown as a separate line on every bill. <b>No hidden charges:</b> what is written in your quote is what you pay. SMS, WhatsApp and online-payment gateway charges are billed at cost, only if you use them.</p>
+
+    <div class="pr-sub">
+      <h3>What will your school pay?</h3>
+      <p>Move the slider to your number of students.</p>
+      <div class="pr-calc">
+        <div class="pr-nbox"><label for="prNn">Students in your school</label><input type="number" id="prNn" min="50" max="3000" value="500"></div>
+        <input type="range" id="prN" min="50" max="3000" step="10" value="500" aria-label="Number of students">
+        <div class="pr-scroll"><table class="pr-table" id="prCalc"></table></div>
+        <p class="pr-fine">Each plan has a yearly minimum and a setup minimum, so very small schools pay the minimum. Starter is free for up to 100 students. These amounts are before GST. Schools with more than 3,000 students or several branches: ask for a written quote.</p>
+      </div>
     </div>
-    <p class="fine">Every package is quoted for your school after the demo.</p>
+
+    <div class="pr-sub">
+      <h3>Compare the plans</h3>
+      <div class="pr-scroll"><table class="pr-table pr-cmp" id="prCmp"></table></div>
+    </div>
+
+    <div class="pr-sub">
+      <h3>Service and support in every plan</h3>
+      <p>Real people answer. Higher plans get faster replies, more training and more customization.</p>
+      <div class="pr-scroll"><table class="pr-table pr-cmp" id="prSvc"></table></div>
+      <p class="pr-fine">A customization request is a change of a few hours: a report or receipt layout, fee heads, a custom export or a small screen change. New modules are quoted separately. Extra work: Rs 1,500 per half day, Rs 3,000 per day. Reply times count working hours.</p>
+    </div>
   </div>
 </section>
 
@@ -640,7 +727,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Not sure where to start?</div>
-      <h2>Which package fits your school?</h2>
+      <h2>Which plan fits your school?</h2>
       <p>Answer two quick questions. We will suggest a starting point, and you can still change it after the demo.</p>
     </div>
     <form class="finder" id="finderForm" novalidate>
@@ -695,8 +782,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <details><summary>We already have a school website. Do we need the website package?</summary><p>No. Choose ERP only. The website package is for schools that also want a new website in their own colours and logo.</p></details>
       <details><summary>Can parents and teachers use it on a phone?</summary><p>Yes. Admin, staff and parents each get their own login and see only their own part. It installs like an app on a phone.</p></details>
       <details><summary>Does it handle fees and accounts together?</summary><p>Yes. Fee receipts, balances, payment vouchers and cost centres sit in the same system, along with payroll including EPF and ESI.</p></details>
-      <details><summary>How does payment work?</summary><p>There is a one-time setup fee and a yearly fee. Setup and the first year are paid at signing, then the yearly fee each year. You get the full quote after the demo, and GST is extra.</p></details>
-      <details><summary>How much does it cost?</summary><p>It depends on your school's size and which package or modules you choose. Message us and we will send a quote after the demo.</p></details>
+      <details><summary>How much does it cost?</summary><p>Plans start at Rs 30 per student per year (Basic), Rs 45 (Core), Rs 70 (Complete) and Rs 85 (Complete + Website). Starter is free for up to 100 students. Each plan has a yearly minimum, and the prices are shown in the Pricing section above. GST is extra.</p></details>
+      <details><summary>How does payment work? Why is there a setup charge?</summary><p>There is a one-time setup fee and then a yearly fee. Setup covers creating your school's system, importing your students and fees, creating logins and training your staff. Setup and the first year are paid at signing. From the second year you pay only the yearly price.</p></details>
+      <details><summary>Are there any hidden costs? Is GST included?</summary><p>There are no hidden charges. Your written quote lists every line: setup, yearly fee and any extras. GST is added on top and shown as a separate line on the bill. SMS, WhatsApp and online-payment gateway charges are at cost, only if you use them, and extra branches or customization are quoted before we start.</p></details>
+      <details><summary>Can we start small and upgrade later?</summary><p>Yes. Start on Basic and move up to Core or Complete when you need more. When you upgrade, only the yearly price changes. You do not pay a new setup charge for modules you already have.</p></details>
+      <details><summary>Can teachers enter marks and attendance from their phones?</summary><p>Yes, from the Core plan up. A teacher marks attendance and enters marks on the phone. When the teacher presses Final Submit, the marks are locked, and once an exam is released to parents the teacher cannot change them. Corrections go through a request to the Admin or Principal, with a reason and a record.</p></details>
+      <details><summary>How are report cards and progress reports made?</summary><p>Marks entered for each exam flow into report cards by themselves. You choose the weightage of each exam, such as FA and SA, and can add moderation marks for a subject. Progress reports can be taken at any stage of the year. A class sheet and each student's report can be printed, one by one or for the whole class.</p></details>
+      <details><summary>How do fees work? Can parents pay online?</summary><p>Fee heads, concessions, receipts and dues are all handled in the Fees module, and the office sees who has paid and who has not, class by class. Parents can pay by UPI from the app, and the office confirms the payment and issues the receipt. An online payment gateway can be added if the school wants it, with the gateway's charges paid at cost.</p></details>
+      <details><summary>Does the ERP include accounting and payroll?</summary><p>Yes, in the Complete plans. Accounting gives the Admin the school's income, expenses and vouchers in one place, and payroll handles staff attendance, leave and salary with EPF and ESI. Many school systems leave these out.</p></details>
+      <details><summary>What about transport, hostel, library and inventory?</summary><p>These modules are in the Complete plans. A school that does not need them can start on Core and upgrade later.</p></details>
+      <details><summary>Is the school website really run from the ERP?</summary><p>Yes, in the Complete + Website plan. The banner, notices, gallery, alumni, achievements and policy pages are edited in the ERP and appear on your website. Admission enquiries from the website come back into the ERP.</p></details>
+      <details><summary>What if the server crashes? Can our data be restored?</summary><p>Every school has automatic backups and a full backup you can download. We test restoring that backup into a fresh database on real school data. The Complete + Website plan includes managed off-server backups and restore help, within 24 hours of a crash.</p></details>
     </div>
   </div>
 </section>
@@ -706,7 +802,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
     <div>
       <div class="eyebrow" style="color:var(--gold)">Take it with you</div>
       <h2>Get the SVM EdTech brochure.</h2>
-      <p>Two pages on what the ERP covers, the three packages and how each school gets its own app. Share it with your management or trustees.</p>
+      <p>Two pages on what the ERP covers and how each school gets its own app. Share it with your management or trustees.</p>
     </div>
     <form class="lead-form" id="broForm" novalidate>
       <div class="row">
@@ -801,17 +897,25 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
     mods.hidden=need!=='some';
     var chosen=[].slice.call(f.querySelectorAll('input[name="mod"]:checked')).map(function(i){return i.value});
     if(!web||!need||(need==='some'&&!chosen.length)){res.hidden=true;return}
-    var name,why;
-    if(need==='some'){name='Pick your modules';why='ERP only, with just the parts you chose: '+chosen.join(', ')+'. You can add more later.'}
-    else if(web==='yes'){name='ERP only';why='The complete ERP, kept separate from your existing website.'}
-    else{name='Website and ERP';why='A school website and the full ERP, in your school\'s own colours and logo.'}
+    var name,why,from;
+    var big=['Accounting','Staff and payroll','Inventory','Hostel','Transport','Library','Communications'];
+    var needBig=chosen.some(function(c){return big.indexOf(c)>-1});
+    if(need==='some'){
+      if(needBig){name='Complete';from=70}
+      else if(chosen.indexOf('Timetable and homework')>-1){name='Core';from=45}
+      else{name='Basic';from=30}
+      why='This covers the parts you chose: '+chosen.join(', ')+'. You can move up to a bigger plan later.'+(web==='no'?' A new school website comes with the Complete + Website plan.':'');
+    }
+    else if(web==='yes'){name='Complete';from=70;why='The complete ERP with both apps, kept separate from your existing website.'}
+    else{name='Complete + Website';from=85;why='The complete ERP with both apps, plus a school website run from the ERP in your own colours and logo.'}
+    why+=' From Rs '+from+' per student per year, one-time setup, GST extra.';
     res.hidden=false;res.innerHTML='';
     var h=document.createElement('h3');h.textContent='We suggest: '+name;
-    var p=document.createElement('p');p.textContent=why+' The price depends on your school\'s size, and we quote it after the demo.';
-    var a=document.createElement('a');a.className='btn btn-primary';a.href='#contact';a.textContent='Ask for a demo with this package';
+    var p=document.createElement('p');p.textContent=why+' You get a written quote after the demo.';
+    var a=document.createElement('a');a.className='btn btn-primary';a.href='#contact';a.textContent='Ask for a demo with this plan';
     a.addEventListener('click',function(){
       var m=document.querySelector('#leadForm textarea[name="message"]');
-      if(m)m.value='Package: '+name+(need==='some'?'. Modules: '+chosen.join(', '):'')+'. Website already: '+(web==='yes'?'yes':'no')+'.'});
+      if(m)m.value='Plan: '+name+(need==='some'?'. Modules: '+chosen.join(', '):'')+'. Website already: '+(web==='yes'?'yes':'no')+'.'});
     res.appendChild(h);res.appendChild(p);res.appendChild(a);
   }
   f.addEventListener('change',render);
@@ -866,6 +970,67 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       try{navigator.clipboard.writeText(t).then(done,function(){})}catch(e){}
     });
   });
+})();
+</script>
+<script>
+(function(){
+  var PLANS=[
+    {name:'Starter',who:'Small schools up to 100 students',rate:0,min:0,sRate:0,sMin:0,free:true,pts:['Student records','Attendance','Notices','Basic fee receipts','Weekly backup download']},
+    {name:'Basic',who:'Records, fees and results',rate:30,min:6000,sRate:30,sMin:4000,pts:['Everything in Starter','Full fee collection','Exams, marks, report cards','Parent login on the web','Email and WhatsApp support']},
+    {name:'Core',who:'Teachers work from their phones',rate:45,min:9000,sRate:30,sMin:4000,hot:true,pts:['Everything in Basic','Teacher app','Timetable and homework','Staff attendance, certificates','Nightly automatic backups']},
+    {name:'Complete',who:'Every module, parents on the app',rate:70,min:18000,sRate:40,sMin:6000,pts:['Everything in Core','Accounting and payroll','Transport, hostel, library, inventory','Consolidated report, bulk messages','Parent app on the phone']},
+    {name:'Complete + Website',who:'Everything, plus your website and managed backups',rate:85,min:25000,sRate:50,sMin:10000,pts:['Everything in Complete','School website run from the ERP','Your own domain set up','Managed off-server backups','Restore within 24 hours']}
+  ];
+  function $(id){return document.getElementById(id)}
+  function fmt(n){return 'Rs '+Math.round(n).toLocaleString('en-IN')}
+  var g=$('prGrid');if(!g)return;
+  g.innerHTML=PLANS.map(function(p){return '<div class="pr-card'+(p.hot?' hot':'')+'">'+(p.hot?'<span class="pr-badge">Most popular</span>':'')+'<h3>'+p.name+'</h3><div class="pr-for">'+p.who+'</div><div class="pr-price">'+(p.free?'Free':'Rs '+p.rate)+'<small>'+(p.free?'up to 100 students':'per student per year')+'</small></div><div class="pr-setup">'+(p.free?'No setup charge':'<b>One-time setup: Rs '+p.sRate+' per student</b> (minimum '+fmt(p.sMin)+')<br>Yearly minimum '+fmt(p.min))+'</div><ul>'+p.pts.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><a class="btn '+(p.hot?'btn-primary':'btn-ghost')+'" href="#contact" data-plan="'+p.name+'">'+(p.free?'Start free':'Ask for a quote')+'</a></div>'}).join('');
+  g.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-plan]');if(!a)return;var m=document.querySelector('#leadForm textarea[name="message"]');if(m)m.value='Plan: '+a.getAttribute('data-plan')+'.'});
+  function calc(){
+    var n=Math.max(1,+$('prNn').value||0),h='<tr><th>Plan</th><th class="n">Yearly</th><th class="n">One-time setup</th><th class="n">Year 1 total</th><th class="n">Renewal (year 2+)</th></tr>';
+    PLANS.forEach(function(p){
+      if(p.free){h+='<tr><td>'+p.name+'</td><td class="n" colspan="4">'+(n<=100?'Free':'Available up to 100 students')+'</td></tr>';return}
+      var y=Math.max(p.min,p.rate*n),st=Math.max(p.sMin,p.sRate*n);
+      h+='<tr class="'+(p.hot?'hotrow':'')+'"><td>'+p.name+'</td><td class="n">'+fmt(y)+'</td><td class="n">'+fmt(st)+'</td><td class="n">'+fmt(y+st)+'</td><td class="n">'+fmt(y)+'</td></tr>';
+    });
+    $('prCalc').innerHTML=h;
+  }
+  $('prN').addEventListener('input',function(e){$('prNn').value=e.target.value;calc()});
+  $('prNn').addEventListener('input',function(e){var v=Math.min(3000,Math.max(50,+e.target.value||50));$('prN').value=v;calc()});
+  calc();
+  var Y='<span class="pr-yes">&#10004;</span>',N='<span class="pr-no">&ndash;</span>';
+  function matrix(id,rows){
+    var head=PLANS.map(function(p){return p.name});
+    var h='<tr><th></th>'+head.map(function(x){return '<th>'+x+'</th>'}).join('')+'</tr>';
+    rows.forEach(function(r){
+      if(typeof r==='string'){h+='<tr class="grp"><td colspan="'+(head.length+1)+'">'+r+'</td></tr>';return}
+      h+='<tr><td>'+r[0]+'</td>'+r.slice(1).map(function(c){return '<td>'+(c===1?Y:c===0?N:c)+'</td>'}).join('')+'</tr>';
+    });
+    $(id).innerHTML=h;
+  }
+  matrix('prCmp',[
+    'Everyday school work',
+    ['Student records and admissions',1,1,1,1,1],['Attendance',1,1,1,1,1],['Notices',1,1,1,1,1],
+    ['Fee collection and receipts','basic','full','full','full','full'],
+    ['Exams, marks and report cards',0,1,1,1,1],['Parent login on the web',0,1,1,1,1],
+    'Apps and classroom',
+    ['Teacher app',0,0,1,1,1],['Timetable and homework',0,0,1,1,1],['Staff attendance and certificates',0,0,1,1,1],['Parent app (installs on the phone)',0,0,0,1,1],
+    'Office and management',
+    ['Accounting',0,0,0,1,1],['Staff payroll',0,0,0,1,1],['Transport, hostel, library, inventory',0,0,0,1,1],['Consolidated report and bulk messages',0,0,0,1,1],
+    'Website and data safety',
+    ['School website run from the ERP',0,0,0,0,1],
+    ['Backups','weekly download','weekly download','nightly + weekly','nightly + weekly','nightly + managed off-server']
+  ]);
+  matrix('prSvc',[
+    ['Support channel','email','email + WhatsApp','email + WhatsApp','+ phone','priority WhatsApp + phone'],
+    ['First reply time (working hours)','best effort','within 48 hours','within 24 hours','within 8 hours','within 4 hours'],
+    ['Online training sessions',0,'1','2','3','4 + one on-site visit'],
+    ['Student and fee data import',0,1,1,'full migration','full migration'],
+    ['Customization requests per year',0,0,'1','3','6'],
+    ['Website design changes per year',0,0,0,0,'4'],
+    ['Crash recovery from backup',0,'self','charged','within 48 hours','within 24 hours'],
+    ['Yearly health check and restore test',0,0,0,0,1]
+  ]);
 })();
 </script>
 </body>
