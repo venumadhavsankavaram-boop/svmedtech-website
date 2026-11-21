@@ -133,3 +133,18 @@
     });
   }
 })();
+
+/* Film players: poster first, plays with sound only when the visitor clicks. No tracking; the clip name is only added to a demo request if the visitor plays it and then sends the form. */
+(function () {
+  document.querySelectorAll('.film-player').forEach(function (box) {
+    var btn = box.querySelector('.play'); if (!btn) return;
+    btn.addEventListener('click', function () {
+      var v = document.createElement('video');
+      v.src = box.getAttribute('data-src'); v.poster = box.getAttribute('data-poster');
+      v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = 'auto';
+      v.setAttribute('aria-label', box.getAttribute('data-label') || 'SVM EdTech video');
+      box.replaceChild(v, btn); var p = v.play(); if (p && p.catch) p.catch(function () {});
+      window.__svmFrom = box.getAttribute('data-name') || '';
+    });
+  });
+})();

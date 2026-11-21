@@ -56,6 +56,10 @@
 <div class="actions"><a class="btn btn-primary" href="#choose">Choose your institution</a><a class="btn btn-ghost" href="#contact">Book a free demo</a></div>
 <p class="proof">Built and used in a live school, Raghavan EM High School, and available to other institutions as their own separate app.</p>
 </div></div></section>
+<section class="film" id="film"><div class="wrap"><div class="film-grid">
+<div class="film-copy"><div class="eyebrow">See it in about a minute</div><h2>From fee registers and paper marks to one screen.</h2><p>Watch how fees, attendance, accounts, results and the parent app come together in one ERP, for schools and colleges.</p><div class="actions"><a class="btn btn-primary" href="https://demo.svmedtech.com/demo-start" target="_blank" rel="noopener">Try the live demo</a><a class="btn btn-ghost" href="#contact">Book a free demo</a></div></div>
+<div class="film-player" data-name="Main film" data-src="/video/svm-main.mp4" data-poster="/video/svm-main-poster.jpg" data-label="main film"><img src="/video/svm-main-poster.jpg" width="1280" height="720" alt="" loading="lazy"><button type="button" class="play" aria-label="Play the main film"><span class="disc"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span><span class="len">1 min 9 s · with voice</span></button></div>
+</div></div></section>
 <section id="choose" style="padding-top:0"><div class="wrap">
 <div class="sec-head"><div class="eyebrow">Who is it for?</div><h2>Pick the one that matches your institution.</h2><p>Each has its own page, its own demo and its own questions answered.</p></div>
 <div class="choose">
@@ -124,7 +128,7 @@
       var t=f.getAttribute('data-type')||(f.elements.type&&f.elements.type.value)||'';
       if(!d.contactName){note.textContent='Please enter your name.';note.className='lead-note err';f.elements.contactName.focus();return}
       if(!d.phone&&!d.email){note.textContent='Please enter a phone number or an email so we can reach you.';note.className='lead-note err';return}
-      d.message=(t?'['+t+'] ':'')+d.message;
+      d.message=(t?'['+t+'] ':'')+d.message+(window.__svmFrom?' [Came from: '+window.__svmFrom+' video]':'');
       btn.disabled=true;note.textContent='Sending...';
       fetch('https://admin.svmedtech.com/api/public/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){
         if(r.ok){f.reset();note.textContent='Thank you. We will get back to you soon.';note.className='lead-note ok'}

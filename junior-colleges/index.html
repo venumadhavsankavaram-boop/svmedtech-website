@@ -62,6 +62,11 @@
 <div class="hero-visual"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/college-dashboard.jpg" width="1440" height="900" alt="SVM EdTech Junior College ERP dashboard showing students by year and combination, seats filled, hall tickets and scholarship money" fetchpriority="high"></div>
 <div class="chips"><span>Principal</span><span>Lecturers</span><span>Parents</span></div></div>
 </div></section>
+<section class="film" id="film"><div class="wrap"><div class="film-grid">
+<div class="film-copy"><div class="eyebrow">See the Junior College ERP</div><h2>MPC, BiPC, CEC, HEC and MEC, handled.</h2><p>Combinations, hall tickets, practicals and scholarships, in a short look at the Junior College ERP.</p><div class="actions"><a class="btn btn-primary" href="https://college.svmedtech.com/demo-start" target="_blank" rel="noopener">Try the college demo</a><a class="btn btn-ghost" href="#contact">Book a free demo</a></div></div>
+<div class="film-player" data-name="Junior College clip" data-src="/video/svm-junior.mp4" data-poster="/video/svm-junior-poster.jpg" data-label="Junior College ERP clip"><img src="/video/svm-junior-poster.jpg" width="1280" height="720" alt="" loading="lazy"><button type="button" class="play" aria-label="Play the Junior College ERP clip"><span class="disc"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span><span class="len">Short clip · with voice</span></button></div>
+</div></div></section>
+
 <section style="padding-top:0"><div class="wrap">
 <div class="sec-head"><div class="eyebrow">What your college gets</div><h2>Made for how a junior college actually runs.</h2><p>Not a school ERP with the words changed. Years, combinations and board exams are built in.</p></div>
 <ul class="kw-list">
@@ -138,7 +143,7 @@
       var t=f.getAttribute('data-type')||(f.elements.type&&f.elements.type.value)||'';
       if(!d.contactName){note.textContent='Please enter your name.';note.className='lead-note err';f.elements.contactName.focus();return}
       if(!d.phone&&!d.email){note.textContent='Please enter a phone number or an email so we can reach you.';note.className='lead-note err';return}
-      d.message=(t?'['+t+'] ':'')+d.message;
+      d.message=(t?'['+t+'] ':'')+d.message+(window.__svmFrom?' [Came from: '+window.__svmFrom+' video]':'');
       btn.disabled=true;note.textContent='Sending...';
       fetch('https://admin.svmedtech.com/api/public/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){
         if(r.ok){f.reset();note.textContent='Thank you. We will get back to you soon.';note.className='lead-note ok'}
