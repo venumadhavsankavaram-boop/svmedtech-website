@@ -143,7 +143,7 @@
       v.src = box.getAttribute('data-src'); v.poster = box.getAttribute('data-poster');
       v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = 'auto';
       v.setAttribute('aria-label', box.getAttribute('data-label') || 'SVM EdTech video');
-      box.replaceChild(v, btn); var p = v.play(); if (p && p.catch) p.catch(function () {});
+      var im = box.querySelector('img'); if (im) im.style.display = 'none'; box.replaceChild(v, btn); var p = v.play(); if (p && p.catch) p.catch(function () {});
       window.__svmFrom = box.getAttribute('data-name') || '';
     });
   });
