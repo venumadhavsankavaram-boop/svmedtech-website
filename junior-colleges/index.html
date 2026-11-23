@@ -96,14 +96,16 @@
 <li><h3>Your college goes live</h3><p>Staff, lecturers and parents start using it, with a direct line to us for changes.</p></li>
 </ol></div></section>
 <section id="pricing"><div class="wrap">
-<div class="sec-head"><div class="eyebrow">Pricing</div><h2>Simple pricing for your junior college.</h2><p>Written down before you sign. Your quote lists every line.</p></div>
-<div class="choose">
-<div class="ch"><div class="tag">Yearly fee</div><h3>Rs 100 per student</h3><ul><li>Per student, per year</li><li>Yearly minimum Rs 30,000</li><li>MPC, BiPC, CEC, HEC and MEC groups included</li></ul></div>
-<div class="ch"><div class="tag">One-time setup</div><h3>Rs 50 per student</h3><ul><li>Setup minimum Rs 15,000</li><li>Your programmes, fees and staff loaded</li><li>Training for your office team</li></ul></div>
-<div class="ch"><div class="tag">3-year price lock</div><h3>Rs 90 per student</h3><ul><li>10% off the yearly fee, fixed for 3 years</li><li>Yearly minimum Rs 27,000</li><li>Setup is not discounted</li></ul></div>
-</div>
-<p style="margin-top:16px;color:var(--muted)"><b>2026 launch prices.</b> Orders confirmed by 31 December 2026 keep them, and with the 3-year lock they stay fixed for 3 years. Prices from 2027 may change. GST is extra if it applies. Customization: Rs 1,500 per half day, Rs 3,000 per day.</p>
-<div class="actions" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px"><a class="btn btn-primary" href="#contact">Get a written quote</a><a class="btn btn-ghost" href="/">&larr; Back to home</a></div>
+<div class="sec-head"><div class="eyebrow">Pricing</div><h2>Simple prices. Pay per student.</h2><p>One plan with every module included. Setup is paid once, and from the second year you pay only the yearly price.</p></div>
+<div class="pr-toggle" role="group" aria-label="Billing term"><button type="button" data-term="1" class="on" aria-pressed="true">Yearly</button><button type="button" data-term="3" aria-pressed="false">3-year price lock <i>save 10%</i></button></div>
+<div style="max-width:420px;margin:0 auto"><div class="pr-card hot"><span class="pr-badge">All modules</span><h3>College ERP</h3><div class="pr-for">Everything for 1st and 2nd Year, MPC, BiPC, CEC, HEC and MEC</div><div class="pr-price" id="cpPrice">Rs 100<small>per student per year</small></div><div class="pr-setup" id="cpSetup"></div><ul><li>Groups, years and seat tracking</li><li>Unit, quarterly and grand tests, with ranks</li><li>Board hall tickets, practical batches</li><li>Scholarships and fee collection</li><li>Accounting and payroll</li><li>Teacher and parent apps on the phone</li></ul><a class="btn btn-primary" href="#contact">Get a written quote</a></div></div>
+<p class="pr-note"><a href="https://demo.svmedtech.com/demo-start" target="_blank" rel="noopener"><b>Try the live demo</b></a> with sample junior college data before you decide. <b>GST is extra, if it applies to you,</b> and is shown as a separate line on the bill. <b>No hidden charges:</b> what is written in your quote is what you pay.</p>
+<div class="pr-sub"><h3>What will your junior college pay?</h3><p>Move the slider to your number of students.</p>
+<div class="pr-calc"><div class="pr-nbox"><label for="cpNn">Students in your junior college</label><input type="number" id="cpNn" min="50" max="5000" value="500"></div>
+<input type="range" id="cpN" min="50" max="5000" step="10" value="500" aria-label="Number of students">
+<div class="pr-scroll"><table class="pr-table" id="cpCalc"></table></div>
+<p class="pr-fine"><b>These are 2026 launch prices.</b> Orders confirmed by 31 December 2026 keep them, and with the 3-year lock they stay fixed for 3 years. Prices from 2027 may change. Customization: Rs 1,500 per half day, Rs 3,000 per day.</p></div></div>
+<div class="actions" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;justify-content:center"><a class="btn btn-ghost" href="/">&larr; Back to home</a></div>
 </div></section>
 <section id="faq"><div class="wrap"><div class="sec-head"><div class="eyebrow">Questions</div><h2>Before you book a demo.</h2></div><div class="faq"><details><summary>Does it handle MPC, BiPC, CEC, HEC and MEC?</summary><p>Yes. You list your combinations with their subjects and seats for 1st Year and 2nd Year, and press Create. Vocational groups and your own groups can be added too. Nothing is ever removed when you change them.</p></details><details><summary>Can it track board hall tickets and results?</summary><p>Yes. The ERP tracks board hall tickets, which are issued and which are handed over, and shows released board results with a pass rate for the year.</p></details><details><summary>Does it have college-style exams?</summary><p>Yes. Unit tests, weekly tests, grand tests, quarterly, half-yearly, annual, pre-final and practical exams are ready to use, and you can add your own exam types.</p></details><details><summary>Does it include fees and accounting?</summary><p>Yes. Fees, receipts, concessions, scholarship tracking and the accounts section are the same proven modules as in our school ERP.</p></details><details><summary>Can we ask for changes?</summary><p>Yes. SVM EdTech stays open to the changes each college asks for. The live demo has a Suggest a change button, so you can tell us what you need while you try it.</p></details><details><summary>How much does it cost?</summary><p>The College plan starts at Rs 100 per student per year, with a yearly minimum of Rs 30,000, plus a one-time setup of Rs 50 per student (minimum Rs 15,000). It includes every module. Choose the 3-year price lock and the yearly fee is 10% lower (Rs 90 per student, minimum Rs 27,000) with the price fixed for 3 years; setup is not discounted. Your final price is agreed in a written quote, and larger colleges can get a better rate. There are no hidden charges.</p></details><details><summary>Is our data kept separate?</summary><p>Yes. Every college gets its own app and its own database, never shared with another institution.</p></details></div></div></section>
 <section class="band-deep" id="contact">
@@ -173,5 +175,14 @@
 })();
 </script>
 <script src="/site.js" defer></script>
+<script>(function(){var term=1;function $(i){return document.getElementById(i)}function fmt(n){return 'Rs '+Math.round(n).toLocaleString('en-IN')}
+function dc(x){return term===3?x*0.9:x}
+function card(){var r=dc(100);$('cpPrice').innerHTML='Rs '+r+'<small>per student per year'+(term===3?' (3-year lock)':'')+'</small>';$('cpSetup').innerHTML='<b>One-time setup: Rs 50 per student</b> (minimum Rs 15,000)<br>Yearly minimum '+fmt(dc(30000))}
+function calc(){var n=Math.max(1,+$('cpNn').value||0),y=dc(Math.max(30000,100*n)),st=Math.max(15000,50*n);
+$('cpCalc').innerHTML='<tr><th>Plan</th><th class="n">Yearly</th><th class="n">One-time setup</th><th class="n">Year 1 total</th><th class="n">Renewal (year 2+)</th><th class="n">Total over 3 years</th></tr><tr class="hotrow"><td>College ERP</td><td class="n">'+fmt(y)+'</td><td class="n">'+fmt(st)+'</td><td class="n">'+fmt(y+st)+'</td><td class="n">'+fmt(y)+'</td><td class="n">'+fmt(st+3*y)+'</td></tr>'}
+$('cpN').addEventListener('input',function(e){$('cpNn').value=e.target.value;calc()});
+$('cpNn').addEventListener('input',function(e){var v=Math.min(5000,Math.max(50,+e.target.value||50));$('cpN').value=v;calc()});
+var tg=document.querySelectorAll('#pricing .pr-toggle button');Array.prototype.forEach.call(tg,function(b){b.addEventListener('click',function(){term=+b.getAttribute('data-term');Array.prototype.forEach.call(tg,function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on?'true':'false')});card();calc()})});
+card();calc()})();</script>
 </body>
 </html>
