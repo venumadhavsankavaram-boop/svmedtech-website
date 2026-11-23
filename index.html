@@ -93,8 +93,10 @@
 .pricing{background:var(--navy-soft)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pricing{background:#151a3d}}
 :root[data-theme="dark"] .pricing{background:#151a3d}
-.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-@media (max-width:860px){.pgrid{grid-template-columns:minmax(0,1fr)}}
+.pgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1000px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.pgrid{grid-template-columns:minmax(0,1fr)}}
+a.pc{display:block;text-decoration:none;color:inherit}a.pc:hover{border-color:var(--navy)}a.pc em{display:block;margin-top:10px;font:600 14px var(--body);font-style:normal;color:var(--navy)}
 .pc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
 .pc small{font:600 12px var(--body);letter-spacing:2px;text-transform:uppercase;color:var(--accent)}
 .pc b{display:block;font:700 30px/1.1 var(--display);margin:8px 0 4px;color:var(--ink)}
@@ -106,8 +108,8 @@
 </head>
 <body>
 <header class="top"><div class="wrap"><a class="logo" href="/" aria-label="SVM EdTech home"><svg viewBox="0 0 64 64" aria-hidden="true"><rect class="sq" x="4" y="4" width="16" height="16" rx="3"/><rect class="sq" x="24" y="4" width="16" height="16" rx="3"/><rect class="gd" x="44" y="4" width="16" height="16" rx="3"/><rect class="sq" x="4" y="24" width="16" height="16" rx="3"/><rect class="sq" x="24" y="24" width="16" height="16" rx="3"/><rect class="sq" x="44" y="24" width="16" height="16" rx="3"/><rect class="sq" x="4" y="44" width="16" height="16" rx="3"/><rect class="sq" x="24" y="44" width="16" height="16" rx="3"/><rect class="sq" x="44" y="44" width="16" height="16" rx="3"/></svg><span class="nm"><b>SVM</b><span>EDTECH</span></span></a>
-<nav class="nav" aria-label="Main"><a href="/schools/">Schools</a><a href="/junior-colleges/">Junior Colleges</a><a href="/degree-colleges/">Degree Colleges</a><a href="/#about">About</a><a class="btn btn-primary" href="#contact">Book a demo</a></nav></div></header>
-<nav class="aud" aria-label="Who is it for"><div class="wrap"><span class="lbl">ERP for</span><a href="/schools/">Schools</a><a href="/junior-colleges/">Junior Colleges</a><a href="/degree-colleges/">Degree Colleges</a></div></nav>
+<nav class="nav" aria-label="Main"><a href="/schools/">Schools</a><a href="/junior-colleges/">Junior Colleges</a><a href="/degree-colleges/">Degree Colleges</a><a href="#pricing">Pricing</a><a href="/#about">About</a><a class="btn btn-primary" href="#contact">Book a demo</a></nav></div></header>
+<nav class="aud" aria-label="Who is it for"><div class="wrap"><span class="lbl">ERP for</span><a href="/schools/">Schools</a><a href="/junior-colleges/">Junior Colleges</a><a href="/degree-colleges/">Degree Colleges</a><a href="#pricing">Pricing</a></div></nav>
 <main>
 <section class="hero"><div class="wrap two"><div>
 <div class="eyebrow">ERP · Accounting · Parent app</div>
@@ -190,9 +192,10 @@
 <section class="pricing" id="pricing"><div class="wrap">
 <div class="sec-head"><div class="eyebrow">Pricing</div><h2>Simple pricing, written down before you sign.</h2></div>
 <div class="pgrid">
-<div class="pc"><small>Schools</small><b>From Rs 30</b><span>per student per year</span></div>
-<div class="pc"><small>Junior and degree colleges</small><b>From Rs 100</b><span>per student per year</span></div>
-<div class="pc"><small>Small schools</small><b>Rs 3,000</b><span>a year for up to 100 students, free setup</span></div>
+<a class="pc" href="/schools/#packages"><small>Schools</small><b>From Rs 30</b><span>per student per year</span><em>See school plans &rarr;</em></a>
+<a class="pc" href="/schools/#packages"><small>Small schools</small><b>Rs 3,000</b><span>a year for up to 100 students, free setup</span><em>See the Starter plan &rarr;</em></a>
+<a class="pc" href="/junior-colleges/#pricing"><small>Junior colleges</small><b>From Rs 100</b><span>per student per year</span><em>See junior college pricing &rarr;</em></a>
+<a class="pc" href="/degree-colleges/#pricing"><small>Degree colleges</small><b>From Rs 100</b><span>per student per year</span><em>See degree college pricing &rarr;</em></a>
 </div>
 <div class="lock"><b>3-year price lock</b><span>Fix today's price for 3 years and pay 10% less every year. Schools pay Rs 27 instead of Rs 30 per student, colleges Rs 90 instead of Rs 100. Setup is not discounted.</span></div>
 <p class="pfine"><b>2026 launch prices.</b> Orders confirmed by 31 December 2026 keep them, and with the 3-year lock they stay fixed for 3 years. Prices from 2027 may change. One-time setup, then a yearly fee. GST is extra if it applies. No hidden charges: your written quote lists every line. <a href="/schools/#packages">See the school plans and prices</a>.</p>
