@@ -407,6 +407,7 @@ a.copy{display:inline-block;text-decoration:none}
 .pr-card .btn{align-self:stretch}
 .pr-note{text-align:center;color:var(--muted);font-size:14px;margin:18px auto 0;max-width:760px}
 .pr-note b{color:var(--ink)}
+.pr-toggle{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 auto 22px}.pr-toggle button{font:600 15px var(--body,inherit);padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}.pr-toggle button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}.pr-toggle i{font-style:normal;font-size:12px;margin-left:6px;padding:2px 8px;border-radius:999px;background:var(--cta);color:var(--cta-ink)}
 .pr-sub{margin-top:54px}
 .pr-sub h3{font-size:clamp(22px,3vw,30px);text-align:center}
 .pr-sub>p{text-align:center;color:var(--muted);max-width:640px;margin:8px auto 0}
@@ -479,7 +480,7 @@ a.copy{display:inline-block;text-decoration:none}
         <a class="btn btn-ghost" href="https://demo.svmedtech.com/demo-start" target="_blank" rel="noopener">Try the live demo</a>
       </div>
       <div class="built-for"><span>Built for</span><ul><li>State Board</li><li>CBSE &amp; ICSE</li><li>KG &amp; primary</li><li>Aided &amp; private</li><li>Rural &amp; budget schools</li></ul></div>
-      <p class="fromp"><b>Plans from Rs 30 per student per year.</b> A free Starter plan for small schools, one-time setup, GST extra if applicable, no hidden charges. <a href="#packages">See the prices</a></p>
+      <p class="fromp"><b>Plans from Rs 30 per student per year.</b> Starter from Rs 3,000 a year for small schools with free setup, one-time setup on the other plans, 10% off with a 3-year price lock, GST extra if applicable, no hidden charges. <a href="#packages">See the prices</a></p>
       <p class="proof">Built and used in a live school, Raghavan EM High School, and available to other schools as their own separate app. Ask for a free trial login after the demo.</p>
     </div>
     <div class="hero-visual">
@@ -628,7 +629,7 @@ a.copy{display:inline-block;text-decoration:none}
       <div class="r" role="row"><div class="k">Attendance and marks</div><div class="o">Can be quietly edited later.</div><div class="w">Locked once entered. Teachers request a correction and the Admin or Principal approves it.</div></div>
       <div class="r" role="row"><div class="k">Your data</div><div class="o">Shared with other schools on one system.</div><div class="w">Your own app and database, with a full backup you can download any time.</div></div>
       <div class="r" role="row"><div class="k">Fees and hall tickets</div><div class="o">Handled by hand at exam time.</div><div class="w">An optional hold while fees are due, with every exception recorded.</div></div>
-      <div class="r" role="row"><div class="k">What you pay for</div><div class="o">A fixed bundle.</div><div class="w">Five clear plans, from free to everything. Pay per student, with setup shown once and no hidden charges.</div></div>
+      <div class="r" role="row"><div class="k">What you pay for</div><div class="o">A fixed bundle.</div><div class="w">Five clear plans, from Rs 3,000 a year to everything. Pay per student, with setup shown once and no hidden charges.</div></div>
     </div>
     <div class="rel">
       <div class="rel-card">
@@ -736,6 +737,7 @@ a.copy{display:inline-block;text-decoration:none}
       <h2>Simple prices. Pay per student.</h2>
       <p>Start small and move up when you need more. Setup is paid once, and from the second year you pay only the yearly price.</p>
     </div>
+    <div class="pr-toggle" role="group" aria-label="Billing term"><button type="button" data-term="1" class="on" aria-pressed="true">Yearly</button><button type="button" data-term="3" aria-pressed="false">3-year price lock <i>save 10%</i></button></div>
     <div class="pr-grid" id="prGrid"></div>
     <p class="pr-note"><a href="https://demo.svmedtech.com/demo-start" target="_blank" rel="noopener"><b>Try the live demo</b></a> with sample school data before you decide. Prices are per student per year. <b>GST is extra, if it applies to you,</b> and is shown as a separate line on the bill. <b>No hidden charges:</b> what is written in your quote is what you pay. SMS, WhatsApp and online-payment gateway charges are billed at cost, only if you use them.</p>
 
@@ -746,7 +748,7 @@ a.copy{display:inline-block;text-decoration:none}
         <div class="pr-nbox"><label for="prNn">Students in your school</label><input type="number" id="prNn" min="50" max="3000" value="500"></div>
         <input type="range" id="prN" min="50" max="3000" step="10" value="500" aria-label="Number of students">
         <div class="pr-scroll"><table class="pr-table" id="prCalc"></table></div>
-        <p class="pr-fine">Each plan has a yearly minimum and a setup minimum, so very small schools pay the minimum. Starter is free for up to 100 students. These amounts are before GST, if applicable. Schools with more than 3,000 students or several branches: ask for a written quote.</p>
+        <p class="pr-fine">Each plan has a yearly minimum and a setup minimum, so very small schools pay the minimum. Starter is Rs 3,000 a year for up to 100 students, with free setup. With the 3-year price lock every yearly amount is 10% lower and the price is fixed for 3 years; setup is not discounted. These amounts are before GST, if applicable. Schools with more than 3,000 students or several branches: ask for a written quote.</p>
       </div>
     </div>
 
@@ -823,7 +825,7 @@ a.copy{display:inline-block;text-decoration:none}
       <details><summary>We already have a school website. Do we need the website package?</summary><p>No. Choose ERP only. The website package is for schools that also want a new website in their own colours and logo.</p></details>
       <details><summary>Can parents and teachers use it on a phone?</summary><p>Yes. Admin, staff and parents each get their own login and see only their own part. It installs like an app on a phone.</p></details>
       <details><summary>Does it handle fees and accounts together?</summary><p>Yes. Fee receipts, balances, payment vouchers and cost centres sit in the same system, along with payroll including EPF and ESI.</p></details>
-      <details><summary>How much does it cost?</summary><p>Plans start at Rs 30 per student per year (Basic), Rs 45 (Core), Rs 70 (Complete) and Rs 85 (Complete + Website). Starter is free for up to 100 students. Each plan has a yearly minimum, and the prices are shown in the Pricing section above. GST is extra if it applies.</p></details>
+      <details><summary>How much does it cost?</summary><p>Plans start at Rs 30 per student per year (Basic), Rs 45 (Core), Rs 70 (Complete) and Rs 85 (Complete + Website). Starter is Rs 3,000 a year for up to 100 students, with free setup. Choose the 3-year price lock and every yearly fee is 10% lower, with the price fixed for 3 years; setup is not discounted. Each plan has a yearly minimum, and the prices are shown in the Pricing section above. GST is extra if it applies.</p></details>
       <details><summary>How does payment work? Why is there a setup charge?</summary><p>There is a one-time setup fee and then a yearly fee. Setup covers creating your school's system, importing your students and fees, creating logins and training your staff. Setup and the first year are paid at signing. From the second year you pay only the yearly price.</p></details>
       <details><summary>Are there any hidden costs? Is GST included?</summary><p>There are no hidden charges. Your written quote lists every line: setup, yearly fee and any extras. If GST applies, it is added on top and shown as a separate line on the bill. SMS, WhatsApp and online-payment gateway charges are at cost, only if you use them, and extra branches or customization are quoted before we start.</p></details>
       <details><summary>Can we start small and upgrade later?</summary><p>Yes. Start on Basic and move up to Core or Complete when you need more. When you upgrade, only the yearly price changes. You do not pay a new setup charge for modules you already have.</p></details>
@@ -1021,7 +1023,7 @@ a.copy{display:inline-block;text-decoration:none}
 <script>
 (function(){
   var PLANS=[
-    {name:'Starter',who:'Small schools up to 100 students',rate:0,min:0,sRate:0,sMin:0,free:true,pts:['Student records','Attendance','Notices','Basic fee receipts','Weekly backup download']},
+    {name:'Starter',who:'Small schools up to 100 students',rate:0,min:3000,sRate:0,sMin:0,flat:true,pts:['Student records','Attendance','Notices','Basic fee receipts','Weekly backup download']},
     {name:'Basic',who:'Records, fees and results',rate:30,min:6000,sRate:30,sMin:4000,pts:['Everything in Starter','Full fee collection','Exams, marks, report cards','Parent login on the web','Email and WhatsApp support']},
     {name:'Core',who:'Teachers work from their phones',rate:45,min:9000,sRate:30,sMin:4000,hot:true,pts:['Everything in Basic','Teacher app','Timetable and homework','Staff attendance, certificates','Nightly automatic backups']},
     {name:'Complete',who:'Every module, parents on the app',rate:70,min:18000,sRate:40,sMin:6000,pts:['Everything in Core','Accounting and payroll','Transport, hostel, library, inventory','Consolidated report, bulk messages','Parent app on the phone']},
@@ -1030,20 +1032,38 @@ a.copy{display:inline-block;text-decoration:none}
   function $(id){return document.getElementById(id)}
   function fmt(n){return 'Rs '+Math.round(n).toLocaleString('en-IN')}
   var g=$('prGrid');if(!g)return;
-  g.innerHTML=PLANS.map(function(p){return '<div class="pr-card'+(p.hot?' hot':'')+'">'+(p.hot?'<span class="pr-badge">Most popular</span>':'')+'<h3>'+p.name+'</h3><div class="pr-for">'+p.who+'</div><div class="pr-price">'+(p.free?'Free':'Rs '+p.rate)+'<small>'+(p.free?'up to 100 students':'per student per year')+'</small></div><div class="pr-setup">'+(p.free?'No setup charge':'<b>One-time setup: Rs '+p.sRate+' per student</b> (minimum '+fmt(p.sMin)+')<br>Yearly minimum '+fmt(p.min))+'</div><ul>'+p.pts.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><a class="btn '+(p.hot?'btn-primary':'btn-ghost')+'" href="#contact" data-plan="'+p.name+'">'+(p.free?'Start free':'Ask for a quote')+'</a></div>'}).join('');
-  g.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-plan]');if(!a)return;var m=document.querySelector('#leadForm textarea[name="message"]');if(m)m.value='Plan: '+a.getAttribute('data-plan')+'.'});
+  var term=1;
+  function dc(x){return term===3?x*0.9:x}
+  function r1(n){var v=Math.round(n*10)/10;return 'Rs '+(v%1?v.toFixed(1):v)}
+  function renderGrid(){
+    g.innerHTML=PLANS.map(function(p){
+      var price=p.flat?fmt(dc(p.min)):r1(dc(p.rate));
+      var sub=(p.flat?'a year, up to 100 students':'per student per year')+(term===3?' (3-year lock)':'');
+      var setup=p.flat?'Free setup':'<b>One-time setup: Rs '+p.sRate+' per student</b> (minimum '+fmt(p.sMin)+')<br>Yearly minimum '+fmt(dc(p.min));
+      return '<div class="pr-card'+(p.hot?' hot':'')+'">'+(p.hot?'<span class="pr-badge">Most popular</span>':'')+'<h3>'+p.name+'</h3><div class="pr-for">'+p.who+'</div><div class="pr-price">'+price+'<small>'+sub+'</small></div><div class="pr-setup">'+setup+'</div><ul>'+p.pts.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><a class="btn '+(p.hot?'btn-primary':'btn-ghost')+'" href="#contact" data-plan="'+p.name+'">'+(p.flat?'Get started':'Ask for a quote')+'</a></div>'}).join('');
+  }
+  g.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-plan]');if(!a)return;var m=document.querySelector('#leadForm textarea[name="message"]');if(m)m.value='Plan: '+a.getAttribute('data-plan')+(term===3?' (3-year price lock)':'')+'.'});
   function calc(){
-    var n=Math.max(1,+$('prNn').value||0),h='<tr><th>Plan</th><th class="n">Yearly</th><th class="n">One-time setup</th><th class="n">Year 1 total</th><th class="n">Renewal (year 2+)</th></tr>';
+    var n=Math.max(1,+$('prNn').value||0),h='<tr><th>Plan</th><th class="n">Yearly</th><th class="n">One-time setup</th><th class="n">Year 1 total</th><th class="n">Renewal (year 2+)</th><th class="n">Total over 3 years</th></tr>';
     PLANS.forEach(function(p){
-      if(p.free){h+='<tr><td>'+p.name+'</td><td class="n" colspan="4">'+(n<=100?'Free':'Available up to 100 students')+'</td></tr>';return}
-      var y=Math.max(p.min,p.rate*n),st=Math.max(p.sMin,p.sRate*n);
-      h+='<tr class="'+(p.hot?'hotrow':'')+'"><td>'+p.name+'</td><td class="n">'+fmt(y)+'</td><td class="n">'+fmt(st)+'</td><td class="n">'+fmt(y+st)+'</td><td class="n">'+fmt(y)+'</td></tr>';
+      if(p.flat){
+        if(n>100){h+='<tr><td>'+p.name+'</td><td class="n" colspan="5">Available up to 100 students</td></tr>';return}
+        var ys=dc(p.min);
+        h+='<tr><td>'+p.name+'</td><td class="n">'+fmt(ys)+'</td><td class="n">Free</td><td class="n">'+fmt(ys)+'</td><td class="n">'+fmt(ys)+'</td><td class="n">'+fmt(ys*3)+'</td></tr>';return}
+      var y=dc(Math.max(p.min,p.rate*n)),st=Math.max(p.sMin,p.sRate*n);
+      h+='<tr class="'+(p.hot?'hotrow':'')+'"><td>'+p.name+'</td><td class="n">'+fmt(y)+'</td><td class="n">'+fmt(st)+'</td><td class="n">'+fmt(y+st)+'</td><td class="n">'+fmt(y)+'</td><td class="n">'+fmt(st+3*y)+'</td></tr>';
     });
     $('prCalc').innerHTML=h;
   }
   $('prN').addEventListener('input',function(e){$('prNn').value=e.target.value;calc()});
   $('prNn').addEventListener('input',function(e){var v=Math.min(3000,Math.max(50,+e.target.value||50));$('prN').value=v;calc()});
-  calc();
+  var tg=document.querySelectorAll('.pr-toggle button');
+  Array.prototype.forEach.call(tg,function(btn){btn.addEventListener('click',function(){
+    term=+btn.getAttribute('data-term');
+    Array.prototype.forEach.call(tg,function(x){var on=x===btn;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on?'true':'false')});
+    renderGrid();calc();
+  })});
+  renderGrid();calc();
   var Y='<span class="pr-yes">&#10004;</span>',N='<span class="pr-no">&ndash;</span>';
   function matrix(id,rows){
     var head=PLANS.map(function(p){return p.name});
