@@ -68,6 +68,8 @@
 .swap p{color:var(--muted);font-size:15px}
 .inside .shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;align-items:start}
 @media (max-width:760px){.inside .shots{grid-template-columns:minmax(0,1fr)}}
+.insTabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}.insTab{font:inherit;font-weight:600;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--navy);cursor:pointer}.insTab[aria-selected=true]{background:var(--navy);color:var(--navy-ink);border-color:transparent}.insTab:focus-visible{outline:2px solid var(--accent,#e8912d);outline-offset:2px}
+.inside .shots[hidden]{display:none}
 .inside .shot{margin:0}
 .inside .shot .frame{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface);box-shadow:0 10px 30px rgba(20,24,43,.12)}
 .inside .shot .bar{display:flex;gap:6px;padding:9px 12px;background:var(--navy-soft);border-bottom:1px solid var(--line)}
@@ -143,12 +145,25 @@
 <div class="ch"><div class="tag">Degree colleges</div><h3>Degree College ERP</h3><ul><li>B.A., B.Com and B.Sc, 3-year and 4-year Honours</li><li>Semesters, credits, SGPA and CGPA</li><li>Attendance, fee reimbursement tracking and internships</li><li>From Rs 100 per student per year</li></ul><div class="acts"><a class="btn btn-primary" href="/degree-colleges/">See the Degree College ERP</a><a class="btn btn-ghost" href="https://degree.svmedtech.com/demo-start" target="_blank" rel="noopener">Try the degree demo</a></div></div>
 </div></div></section>
 <section class="inside" id="inside" style="padding-top:0"><div class="wrap">
-<div class="sec-head"><div class="eyebrow">See inside</div><h2>Screens from the ERP itself.</h2><p>What the office sees every day, and what parents and teachers see on their phones.</p></div>
-<div class="shots">
-<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/dashboard.jpg" width="800" height="491" loading="lazy" alt="SVM EdTech ERP dashboard with total strength, quick actions and today's alerts"></div><figcaption><b>One dashboard for the day</b>Strength, fee dues, attendance follow-ups and new enquiries on one screen.</figcaption></figure>
-<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/fees.jpg" width="800" height="491" loading="lazy" alt="SVM EdTech fee management screen with collected and outstanding amounts by class"></div><figcaption><b>Fees, class by class</b>See what is collected, what is pending and who is overdue.</figcaption></figure>
-<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/accounting.jpg" width="800" height="491" loading="lazy" alt="SVM EdTech accounting overview with income by source and expenses by category"></div><figcaption><b>Accounting built in</b>Income, expenses and cash position, with vouchers and daily collections.</figcaption></figure>
-<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/attendance.jpg" width="800" height="491" loading="lazy" alt="SVM EdTech ERP attendance screen with classes, sections and student counts"></div><figcaption><b>Attendance by class and section</b>Mark attendance and see reports and low-attendance students.</figcaption></figure>
+<div class="sec-head"><div class="eyebrow">See inside</div><h2>Screens from the ERP itself.</h2><p>Real screens from the live demo of each ERP: School, Junior College and Degree College. What the office sees every day, and what parents and teachers see on their phones.</p></div>
+<div class="insTabs" role="tablist" aria-label="Choose an ERP"><button type="button" role="tab" class="insTab" data-t="school" aria-selected="true">School</button><button type="button" role="tab" class="insTab" data-t="junior" aria-selected="false">Junior College</button><button type="button" role="tab" class="insTab" data-t="degree" aria-selected="false">Degree College</button></div>
+<div class="shots" role="tabpanel" id="insp-school">
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-school-dashboard.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech School ERP: One dashboard for the day"></div><figcaption><b>One dashboard for the day</b>Strength, fee dues, attendance follow-ups and new enquiries on one screen.</figcaption></figure>
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-school-fees.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech School ERP: Fees, class by class"></div><figcaption><b>Fees, class by class</b>Collected, pending and overdue, with receipts and defaulters.</figcaption></figure>
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-school-accounting.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech School ERP: Accounting built in"></div><figcaption><b>Accounting built in</b>Income, expenses and cash position, with vouchers and daily collections.</figcaption></figure>
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-school-attendance.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech School ERP: Attendance by class and section"></div><figcaption><b>Attendance by class and section</b>Mark attendance and see reports and low-attendance students.</figcaption></figure>
+</div>
+<div class="shots" role="tabpanel" id="insp-junior" hidden>
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-junior-dashboard.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech Junior College ERP: College at a glance"></div><figcaption><b>College at a glance</b>MPC, BiPC, CEC and HEC by year, with seats and fee dues.</figcaption></figure>
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-junior-attendance.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech Junior College ERP: Attendance by year and group"></div><figcaption><b>Attendance by year and group</b>Mark by group and flag students falling behind.</figcaption></figure>
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-junior-exams.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech Junior College ERP: Exams, marks and results"></div><figcaption><b>Exams, marks and results</b>Unit tests, quarterly and grand tests, with admit cards and room allotment.</figcaption></figure>
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-junior-fees.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech Junior College ERP: Fees by year and group"></div><figcaption><b>Fees by year and group</b>Collected and outstanding for each group, with receipts.</figcaption></figure>
+</div>
+<div class="shots" role="tabpanel" id="insp-degree" hidden>
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-degree-dashboard.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech Degree College ERP: Programmes and years at a glance"></div><figcaption><b>Programmes and years at a glance</b>B.Com, B.Sc and B.A. across the 4-year Honours years.</figcaption></figure>
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-degree-attendance.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech Degree College ERP: Attendance by programme and year"></div><figcaption><b>Attendance by programme and year</b>Mark attendance and see who is below 75%.</figcaption></figure>
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-degree-exams.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech Degree College ERP: Internal and semester exams"></div><figcaption><b>Internal and semester exams</b>Exam types, marks entry, SGPA and CGPA results.</figcaption></figure>
+<figure class="shot"><div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="/screens/real-degree-fees.jpg" width="1400" height="729" loading="lazy" alt="SVM EdTech Degree College ERP: Fees by honours year"></div><figcaption><b>Fees by honours year</b>Collected and outstanding for each programme and year.</figcaption></figure>
 </div>
 <div class="phones">
 <figure><div class="scr"><img src="/screens/app-parent-home.jpg" width="432" height="770" loading="lazy" alt="Parent app home screen"></div><figcaption><b>Parent app</b>Home</figcaption></figure>
@@ -271,5 +286,6 @@
 })();
 </script>
 <script src="/site.js" defer></script>
+<script>(function(){var tabs=document.querySelectorAll('.insTab');tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});['school','junior','degree'].forEach(function(t){var e=document.getElementById('insp-'+t);if(e)e.hidden=(t!==b.dataset.t)})})})})();</script>
 </body>
 </html>
