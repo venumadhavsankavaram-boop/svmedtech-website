@@ -926,7 +926,7 @@ a.copy{display:inline-block;text-decoration:none}
     var note=document.getElementById('leadNote'),btn=document.getElementById('leadBtn');
     f.addEventListener('submit',function(ev){
       ev.preventDefault();note.className='lead-note';
-      var d={};['contactName','schoolName','phone','email','message','website'].forEach(function(k){d[k]=(f.elements[k].value||'').trim()});d.message='[School] '+d.message+(window.__svmFrom?' [Came from: '+window.__svmFrom+' video]':'');
+      var d={};['contactName','schoolName','phone','email','message','website'].forEach(function(k){d[k]=(f.elements[k].value||'').trim()});d.kind='school';d.message='[School] '+d.message+(window.__svmFrom?' [Came from: '+window.__svmFrom+' video]':'');
       if(!d.contactName){note.textContent='Please enter your name.';note.className='lead-note err';f.elements.contactName.focus();return}
       if(!d.phone&&!d.email){note.textContent='Please enter a phone number or an email so we can reach you.';note.className='lead-note err';return}
       btn.disabled=true;note.textContent='Sending...';
@@ -979,7 +979,7 @@ a.copy{display:inline-block;text-decoration:none}
     var d={};['contactName','schoolName','phone','email','website'].forEach(function(k){d[k]=(f.elements[k].value||'').trim()});
     if(!d.contactName){note.textContent='Please enter your name.';note.className='lead-note err';f.elements.contactName.focus();return}
     if(!d.phone&&!d.email){note.textContent='Please enter a phone number or an email.';note.className='lead-note err';return}
-    d.message='[School] Downloaded the brochure';
+    d.kind='school';d.message='[School] Downloaded the brochure';
     btn.disabled=true;note.textContent='One moment...';
     var show=function(){note.className='lead-note ok';note.textContent='';var a=document.createElement('a');a.href='/SVM-EdTech-Brochure.pdf';a.target='_blank';a.rel='noopener';a.className='btn btn-primary';a.textContent='Download the brochure (PDF)';note.appendChild(document.createTextNode('Thank you. '));note.appendChild(a);btn.hidden=true;f.reset()};
     fetch('https://admin.svmedtech.com/api/public/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){

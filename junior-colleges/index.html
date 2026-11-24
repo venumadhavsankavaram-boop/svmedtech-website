@@ -155,6 +155,7 @@
       var t=f.getAttribute('data-type')||(f.elements.type&&f.elements.type.value)||'';
       if(!d.contactName){note.textContent='Please enter your name.';note.className='lead-note err';f.elements.contactName.focus();return}
       if(!d.phone&&!d.email){note.textContent='Please enter a phone number or an email so we can reach you.';note.className='lead-note err';return}
+      d.kind='junior_college';
       d.message=(t?'['+t+'] ':'')+d.message+(window.__svmFrom?' [Came from: '+window.__svmFrom+' video]':'');
       btn.disabled=true;note.textContent='Sending...';
       fetch('https://admin.svmedtech.com/api/public/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){
