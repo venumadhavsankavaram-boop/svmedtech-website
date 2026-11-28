@@ -912,7 +912,7 @@ a.copy{display:inline-block;text-decoration:none}
     <div class="kw-footer"><a href="/school-fee-management-software/">Fee management</a> · <a href="/school-attendance-software/">Attendance</a> · <a href="/school-accounting-software/">Accounting</a> · <a href="/school-erp-software-india/">School ERP India</a> · <a href="/school-erp-software-annamayya-district/">Annamayya district</a></div>
     <div class="kw-footer"><a href="/schools/">Schools</a> · <a href="/junior-colleges/">Junior Colleges</a> · <a href="/degree-colleges/">Degree Colleges</a></div>
     <div class="kw-footer">Guides: <a href="/school-erp-software-india/">School ERP in India</a> · <a href="/school-fee-management-software/">Fee management</a> · <a href="/school-accounting-software/">School accounting</a> · <a href="/school-attendance-software/">Attendance</a> · <a href="/school-erp-software-annamayya-district/">Annamayya district</a></div><div class="kw-footer"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></div>
-    <div>© <span id="yr">2026</span> SVM EdTech</div>
+    <div id="visitLine" hidden></div><div>© <span id="yr">2026</span> SVM EdTech</div>
   </div>
 </footer>
 
@@ -1113,6 +1113,12 @@ a.copy{display:inline-block;text-decoration:none}
 })();
 </script>
 <script src="/site.js" defer></script>
+<script>
+/* Visitor counter: counts once per browser per day; the line stays hidden until the server says the total is big enough to show. */
+(function(){var el=document.getElementById('visitLine');if(!el)return;var K='visitDay',d=new Date(Date.now()+19800000).toISOString().slice(0,10),t='';try{t=localStorage.getItem(K)||''}catch(e){}
+var post=t!==d;fetch('https://admin.svmedtech.com'+(post?'/api/public/visit':'/api/public/visits'),{method:post?'POST':'GET'}).then(function(r){return r.json()}).then(function(j){if(post){try{localStorage.setItem(K,d)}catch(e){}}
+if(j&&j.show){el.textContent='\uD83D\uDC65 '+Number(j.total).toLocaleString('en-IN')+' visitors';el.hidden=false}}).catch(function(){})})();
+</script>
 </body>
 </html>
                                                              
